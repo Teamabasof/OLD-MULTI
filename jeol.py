@@ -2,9 +2,6 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import CallbackQuery
 import asyncio
-import re
-import json
-import base64
 
 Jeol=Client(
     "Jeol Bot",
@@ -16,7 +13,6 @@ Jeol=Client(
 
 @Jeol.on_message(filters.command("start"))
 async def start_message(bot, message):
-    await message.reply_chat_action("Typing")
     m=await message.reply_sticker("CAACAgUAAxkBAAIBU2J-N7WIdJobwDnajHerWD7aD-IwAAKeBAACf7TwVxZUQiDRe7p1JAQ")
     await asyncio.sleep(1)
     await m.delete(2)
