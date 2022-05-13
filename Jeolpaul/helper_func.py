@@ -49,7 +49,7 @@ THANK YOU FOR USING BETA🤍""")
 @Jeol.on_message(filters.command("dice"))
 async def dice_message(bot, message):
     await message.reply_text(
-    text = "🎲")
+    text = "GO AND CRY🖕")
 
 @Jeol.on_message(filters.command("bots"))
 async def bots_message(bot, message):
