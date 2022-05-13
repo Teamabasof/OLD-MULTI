@@ -43,8 +43,3 @@
   <img src="https://komarev.com/ghpvc/?username=Jeolpaul&label=VIEWS&style=flat-square&color=blue" />
 </p>
 
-```js
-
-### Heroku Deployment
-  
-  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jeolpaul/pyrobotjeol)
