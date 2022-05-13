@@ -69,9 +69,8 @@ THANK YOU FOR USING BETA🤍""")
 @Jeol.on_message(filter.command("bots"))
 async def bots_message(bot, message):
     await message.reply_text(
-        text = f"""Hey {message.from_user.mention}
-👇🏻👇🏻👇🏻HERE IS OUR BOTS LIST👇🏻👇🏻👇🏻"""
-    reply_markup=InlineKeyboardMarkup( [[
+        text = f"Hey {message.from_user.mention}👇🏻👇🏻👇🏻HERE IS OUR BOTS LIST👇🏻👇🏻👇🏻"
+        reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("INFO BOT", url="https://t.me/get_id_beta_bot"),
             InlineKeyboardButton("MUSIC BOT", url="https://t.me/Kochirajavu_musicbot")
             ],[
