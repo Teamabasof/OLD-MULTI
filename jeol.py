@@ -11,16 +11,14 @@ Jeol=Client(
     api_hash="1cd29c2b7e1df5f18aeaeafbf7ebf7cd"
 )
 
-await asyncio.sleep(1) await m.delete(6)
-
 
 @Jeol.on_message(filters.command("start"))
 async def start_message(bot, message):
     await message.reply_sticker(
         sticker="CAACAgUAAxkBAAIBU2J-N7WIdJobwDnajHerWD7aD-IwAAKeBAACf7TwVxZUQiDRe7p1JAQ"
     )
-
-
+    await asyncio.sleep(1)
+    await m.delete(6)
     await message.reply_text(
         text=f"Hello {message.from_user.mention}👋🏻 How are you Iam The official BETA BOT Type /bots to see our bot list",
         reply_markup=InlineKeyboardMarkup( [[
