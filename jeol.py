@@ -66,7 +66,7 @@ async def info_message(bot, message):
 
 THANK YOU FOR USING BETA🤍""")
 
-@Jeol.on_message(filter.command("bots"))
+@Jeol.on_message(filters.command("bots"))
 async def bots_message(bot, message):
     await message.reply_text(
         text=f"""Hey {message.from_user.mention}
