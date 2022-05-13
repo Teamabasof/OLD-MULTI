@@ -11,9 +11,8 @@ Jeol=Client(
 
 @Jeol.on_message(filters.command("start"))
 async def start_message(bot, message):
-    await message.reply_photo(
-        photo="https://telegra.ph//file/fa04a6443219b99624c57.jpg",
-        caption=f"Hello {message.from_user.mention}👋🏻 How are you Iam a Telegram Bot to Get Your user information.Type /help to know the commands",
+    await message.reply_text(
+        text=f"Hello {message.from_user.mention}👋🏻 How are you Iam a Telegram Bot to Get Your user information.Type /help to know the commands",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Support", url="https://t.me/BETA_BOTSUPPORT"),
             InlineKeyboardButton("Updates", url="https://t.me/BETA_UPDATES")
