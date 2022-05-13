@@ -6,7 +6,7 @@ from config import FORCE_SUB
 import asyncio
 
 
-@Jeol.on_message(filters.command("start"))
+@Client.on_message(filters.command("start"))
 async def start_message(bot, message):
     if FORCE_SUB:   
         try:             
@@ -39,7 +39,7 @@ async def start_message(bot, message):
                      )
                  )
 
-@Jeol.on_message(filters.command("help"))
+@Client.on_message(filters.command("help"))
 async def help_message(bot, message):
     if FORCE_SUB:   
         try:             
@@ -67,7 +67,7 @@ Thank you for using Beta"""
 
 
 
-@Jeol.on_message(filters.command("id"))
+@Client.on_message(filters.command("id"))
 async def id_message(bot, message):
     if FORCE_SUB:   
         try:             
@@ -94,12 +94,12 @@ async def id_message(bot, message):
 ○MENTION : {message.from_user.mention}
 THANK YOU FOR USING BETA🤍""")
 
-@Jeol.on_message(filters.command("dice"))
+@Client.on_message(filters.command("dice"))
 async def dice_message(bot, message):
     await message.reply_text(
     text = "🎲")
 
-@Jeol.on_message(filters.command("bots"))
+@Client.on_message(filters.command("bots"))
 async def bots_message(bot, message):
     await message.reply_text(
         text=f"""Hey {message.from_user.mention}
@@ -115,7 +115,7 @@ async def bots_message(bot, message):
 
 
 
-@Jeol.on_callback_query()
+@Client.on_callback_query()
 async def callback(bot, msg):
    if msg.data == "commands":
        await msg.message.edit(
