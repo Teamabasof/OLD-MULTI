@@ -11,6 +11,11 @@ Jeol=Client(
 
 @Jeol.on_message(filters.command("start"))
 async def start_message(bot, message):
+    await message.reply_sticker(
+        sticker="CAACAgUAAxkBAAIBU2J-N7WIdJobwDnajHerWD7aD-IwAAKeBAACf7TwVxZUQiDRe7p1JAQ"
+    )
+
+
     await message.reply_text(
         text=f"Hello {message.from_user.mention}👋🏻 How are you Iam a Telegram Bot to Get Your user information.Type /help to know the commands",
         reply_markup=InlineKeyboardMarkup( [[
