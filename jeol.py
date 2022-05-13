@@ -84,6 +84,9 @@ COMMANDS - /start /help /id /info /bots THESE WERE OUR COMMANS WE HAVE PUBLISHED
        )
 
 
+async def stop(self, *args):
+        await super().stop()
+        logging.info("Restarting bot.")
 
 
 Jeol.run()
