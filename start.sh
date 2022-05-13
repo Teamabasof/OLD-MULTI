@@ -9,4 +9,4 @@ fi
 cd /pyrobotjeol
 pip3 install -U -r requirements.txt
 echo "BOT IS STARTING⚡️⚡️⚡️"
-python3 jeol.py
+python3 config.py
