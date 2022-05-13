@@ -5,7 +5,7 @@
     "repository": "https://github.com/Jeolpaul/JEOLBOT",
     "keywords": ["tgbot", "pyrogram", "telegram bot"],
     "env": {
-        "TOKEN": {
+        "BOT_TOKEN": {
             "description": "Your Bot token from @Botfather"
         },
         "API_ID": {
