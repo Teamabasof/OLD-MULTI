@@ -49,7 +49,7 @@ async def id_message(bot, message):
     await message.reply_text(
     text = f"""
 👁️‍🗨️DETAILS
-○ID : {message.from_user.id}
+○ID : <code>{message.from_user.id}</code>
 ○FIRST NAME : {message.from_user.first_name}
 ○LAST NAME : {message.from_user.last_name}
 ○USERNAME : @{message.from_user.username}
