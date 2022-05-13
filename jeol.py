@@ -25,7 +25,7 @@ async def start_message(bot, message):
             InlineKeyboardButton("Updates", url="https://t.me/BETA_UPDATES")
             ],[
             InlineKeyboardButton("Developer", url="https://t.me/JP_Jeol")
-            InlineKeyboardButton("COMMANDS", callback_data="commands")
+            InlineKeyboardButton("commands", callback_data="commands")
             ]]
             )
         )
@@ -90,7 +90,7 @@ async def callback(bot, msg):
    if msg.data == "commands":
        await msg.message.edit(
            text="""HEY HERE YOU CAN FIND THE BASIC COMMANDS OF MINE.IF YOU DON'T KNOW HOW TO USE COMMAND JOIN SUPPORT GROUP AND ASK.
-COMANDS - /start /help /id /info /bots THESE WERE OUR COMMANS WE HAVE PUBLISHED"""
+COMMANDS - /start /help /id /info /bots THESE WERE OUR COMMANS WE HAVE PUBLISHED"""
        )
 
 
