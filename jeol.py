@@ -30,7 +30,7 @@ async def start_message(bot, message):
 @Jeol.on_message(filters.command("help"))
 async def help_message(bot, message):
     await message.reply_photo(
-        photo="https://telegra.ph//file/e937426b58e31a881c25f.jpg"
+        photo="https://telegra.ph//file/e937426b58e31a881c25f.jpg",
         caption="""Hey how can i help You. 
 To see our bot list type bots
 If you have any questions join support
