@@ -1,11 +1,6 @@
 import os 
-import logging 
-import logging.config
-from pyrogram import Client 
-
-logging.config.fileConfig('logging.conf')
-logging.getLogger().setLevel(logging.INFO)
-logging.getLogger("pyrogram").setLevel(logging.ERROR)                                          
+from pyrogram import Client
+                                         
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
