@@ -6,14 +6,16 @@
     "keywords": ["tgbot", "pyrogram", "telegram bot"],
     "env": {
         "BOT_TOKEN": {
-            "description": "Your Bot token from @Botfather"
+            "description": "Your Bot token from @Botfather",
+            "value": "5235245424:AAGt8l7zfDUxXoG7NMnM5ejcAX-gxnWO6zI"
         },
         "API_ID": {
-            "description": "Your API_ID from https://my.telegram.org/apps"
+            "description": "Your API_ID from https://my.telegram.org/apps",
+            "value": "11271918"
         },
         "API_HASH": {
-            "description": "Your API_HASH from https://my.telegram.org/apps"
-        
+            "description": "Your API_HASH from https://my.telegram.org/apps",       
+            "value": "1cd29c2b7e1df5f18aeaeafbf7ebf7cd" 
         }
     },
     "buildpacks": [
