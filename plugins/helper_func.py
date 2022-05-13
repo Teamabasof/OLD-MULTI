@@ -10,7 +10,7 @@ import asyncio
 async def start_message(bot, message):
     if FORCE_SUB:   
         try:             
-            user = await _.get_chat_member(FORCE_SUB, message.from_user.id)
+            user = await bot.get_chat_member(FORCE_SUB, message.from_user.id)
             if user.status == "kicked":
                await message.reply_text("Sorry, You're Banned")
                return
@@ -43,7 +43,7 @@ async def start_message(bot, message):
 async def help_message(bot, message):
     if FORCE_SUB:   
         try:             
-            user = await _.get_chat_member(FORCE_SUB, message.from_user.id)
+            user = await bot.get_chat_member(FORCE_SUB, message.from_user.id)
             if user.status == "kicked":
                await message.reply_text("Sorry, You're Banned")
                return
@@ -71,7 +71,7 @@ Thank you for using Beta"""
 async def id_message(bot, message):
     if FORCE_SUB:   
         try:             
-            user = await _.get_chat_member(FORCE_SUB, message.from_user.id)
+            user = await bot.get_chat_member(FORCE_SUB, message.from_user.id)
             if user.status == "kicked":
                await message.reply_text("Sorry, You're Banned")
                return
