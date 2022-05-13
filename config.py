@@ -15,7 +15,7 @@ API_HASH = os.environ.get("API_HASH", "")
 
 FORCE_SUB = os.environ.get("FORCE_SUB", None)           
 
-class Bot(Client):
+class Client(Client):
 
     def __init__(self):
         super().__init__(
@@ -48,7 +48,7 @@ class Bot(Client):
       await super().stop()
       logging.info("Bot Stopped")
         
-bot = Bot()
+bot = Client()
 bot.run()
 
 
