@@ -14,11 +14,10 @@ Jeol=Client(
 
 @Jeol.on_message(filters.command("start"))
 async def start_message(bot, message):
-    await message.reply_sticker(
-        sticker="CAACAgUAAxkBAAIBU2J-N7WIdJobwDnajHerWD7aD-IwAAKeBAACf7TwVxZUQiDRe7p1JAQ"
-    )
+    await message.reply_chat_action("Typing")
+    m=await message.reply_sticker("CAACAgUAAxkBAAIBU2J-N7WIdJobwDnajHerWD7aD-IwAAKeBAACf7TwVxZUQiDRe7p1JAQ")
     await asyncio.sleep(1)
-    await m.delete(6)
+    await m.delete(2)
     await message.reply_text(
         text=f"Hello {message.from_user.mention}👋🏻 How are you Iam The official BETA BOT Type /bots to see our bot list",
         reply_markup=InlineKeyboardMarkup( [[
