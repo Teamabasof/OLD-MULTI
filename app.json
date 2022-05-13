@@ -1,9 +1,9 @@
 {
     "name": "Jeol Pyrogram",
-    "description": "Bot can Generate Bitly short l8nk ",
+    "description": "Bot can Made by pyrogram",
     "stack": "container",
     "repository": "https://github.com/Jeolpaul/JEOLBOT",
-    "keywords": ["Bitly", "pyrogram", "telegram bot"],
+    "keywords": ["tgbot", "pyrogram", "telegram bot"],
     "env": {
         "TOKEN": {
             "description": "Your Bot token from @Botfather"
