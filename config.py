@@ -8,7 +8,7 @@ API_ID = int(os.environ.get("API_ID", ""))
 
 API_HASH = os.environ.get("API_HASH", "")
 
-FORCE_SUB = os.environ.get("FORCE_SUB", None)           
+FORCE_SUB = os.environ.get("FORCE_SUB", "")           
 
 
 if __name__ == "__main__" :
