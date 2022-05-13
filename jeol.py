@@ -13,7 +13,7 @@ Jeol=Client(
 async def start_message(bot, message):
     await message.reply_photo(
         photo="https://telegra.ph//file/fa04a6443219b99624c57.jpg",
-        caption="Hello👋🏻 How are you Iam a Telegram Bot to Get Your user information.Type /help to know the commands",
+        caption=f"Hello {message.from_user.mention}👋🏻 How are you Iam a Telegram Bot to Get Your user information.Type /help to know the commands",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Support", url="https://t.me/BETA_BOTSUPPORT"),
             InlineKeyboardButton("Updates", url="https://t.me/BETA_UPDATES")
@@ -25,8 +25,10 @@ async def start_message(bot, message):
 
 @Jeol.on_message(filters.command("help"))
 async def help_message(bot, message):
-    await message.reply_text(
-        text="""Hey how can i help You. The Basic Commands is /id & /info.
+    await message.reply_photo(
+        photo="https://telegra.ph//file/e937426b58e31a881c25f.jpg"
+        caption="""Hey how can i help You. 
+The Basic Commands is /id & /info.
 If you have any questions join support
 Group and ask🤍❤️
 Thank you for using Beta""")
