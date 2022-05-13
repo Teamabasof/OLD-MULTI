@@ -57,18 +57,10 @@ async def id_message(bot, message):
 
 THANK YOU FOR USING BETA🤍""")
 
-@Jeol.on_message(filters.command("info"))
-async def info_message(bot, message):
+@Jeol.on_message(filters.command("dice"))
+async def dice_message(bot, message):
     await message.reply_text(
-    text = f"""
-👁️‍🗨️DETAILS
-○ID : {message.from_user.id}
-○FIRST NAME : {message.from_user.first_name}
-○LAST NAME : {message.from_user.last_name}
-○USERNAME : @{message.from_user.username}
-○MENTION : {message.from_user.mention}
-
-THANK YOU FOR USING BETA🤍""")
+    text = "🎲")
 
 @Jeol.on_message(filters.command("bots"))
 async def bots_message(bot, message):
