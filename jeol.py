@@ -11,6 +11,8 @@ Jeol=Client(
     api_hash="1cd29c2b7e1df5f18aeaeafbf7ebf7cd"
 )
 
+await asyncio.sleep(1) await m.delete(6)
+
 
 @Jeol.on_message(filters.command("start"))
 async def start_message(bot, message):
