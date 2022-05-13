@@ -35,7 +35,8 @@ async def help_message(bot, message):
 To see our bot list type bots
 If you have any questions join support
 Group and ask🤍❤️
-Thank you for using Beta""")
+Thank you for using Beta"""
+    )
 
 
 
