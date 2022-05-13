@@ -1,0 +1,23 @@
+{
+    "name": "Jeol Pyrogram",
+    "description": "Bot can Generate Bitly short l8nk ",
+    "repository": "https://github.com/Jeolpaul/JEOLBOT",
+    "keywords": ["Bitly", "pyrogram", "telegram bot"],
+    "env": {
+        "TOKEN": {
+            "description": "Your Bot token from @Botfather"
+        },
+        "API_ID": {
+            "description": "Your API_ID from https://my.telegram.org/apps"
+        },
+        "API_HASH": {
+            "description": "Your API_HASH from https://my.telegram.org/apps"
+        
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
