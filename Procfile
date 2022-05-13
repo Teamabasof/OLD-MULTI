@@ -1,1 +1,1 @@
-web: python3 jeol.py
+worker: python3 jeol.py
