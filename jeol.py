@@ -5,7 +5,7 @@ from pyrogram.types import CallbackQuery
 
 Jeol=Client(
     "Jeol Bot",
-    bot_token="5119444610:AAHIxfvmaPX8Oy4NJV5wITZwzYszicZPhj0",
+    bot_token="5235245424:AAGt8l7zfDUxXoG7NMnM5ejcAX-gxnWO6zI",
     api_id="11271918",
     api_hash="1cd29c2b7e1df5f18aeaeafbf7ebf7cd"
 )
