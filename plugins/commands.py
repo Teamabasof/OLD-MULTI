@@ -88,7 +88,7 @@ async def stickerid(bot, message):
        await message.reply("Oops !! Not a sticker file")
 
 
-@Client.on_message(filters.command("broadcast")filters.private & filters.user(ADMIN))
+@Client.on_message(filters.command("broadcast") filters.private & filters.user(ADMIN))
 async def broadcast(bot, message):
  if (message.reply_to_message):
    ms = await message.reply_text("Geting All ids from database ...........")
@@ -102,7 +102,7 @@ async def broadcast(bot, message):
      	pass
 
 
-@Client.on_message(filters.command("users")filters.private & filters.user(ADMIN))
+@Client.on_message(filters.command("users") filters.private & filters.user(ADMIN))
 async def get_users(client: Client, message: Message):    
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
     ids = getid()
