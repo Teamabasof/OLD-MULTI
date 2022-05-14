@@ -20,8 +20,7 @@ async def telegraph(client, message):
     if not file_info:
         await message.reply_text("Not supported!")
         return
-    _t = os.path.join(
-        TMP_DOWNLOAD_DIRECTORY,
+    _t = os.path.join("./DOWNLOADS/",
         str(replied.message_id)
     )
     if not os.path.isdir(_t):
