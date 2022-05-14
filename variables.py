@@ -12,4 +12,3 @@ ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.
 
 DB_URL = os.environ.get("DB_URL","mongodb+srv://CK:CK@cluster0.spjef.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
-TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
