@@ -8,33 +8,28 @@
     "env": {        
         "API_ID": {
             "description": "Your API_ID from https://my.telegram.org/apps",
-            "value": "11271918",
-            "required": true
+            "value": "11271918"
         },
         "API_HASH": {
             "description": "Your API_HASH from https://my.telegram.org/apps",       
-            "value": "1cd29c2b7e1df5f18aeaeafbf7ebf7cd",
-            "required": true
+            "value": "1cd29c2b7e1df5f18aeaeafbf7ebf7cd"
         },
         "BOT_TOKEN": {
             "description": "Your Bot token from @Botfather",
-            "value": "5235245424:AAGt8l7zfDUxXoG7NMnM5ejcAX-gxnWO6zI",
-            "required": true
+            "value": "5235245424:AAGt8l7zfDUxXoG7NMnM5ejcAX-gxnWO6zI"
         },
         "FORCE_SUB": {
             "description": "Your Force Subscribe Channel username without @ linke this :- mkn_bots_updates.",       
-            "value": "",
+            "value": "None",
             "required": false
         },
         "DB_URL": {
             "description": "Your database from mongodb",
-            "value": "",
-            "required": true
+            "value": ""
         },
         "ADMIN": {
             "description": "Your telagram user id to control this bot eg:- 5781982",
-            "value": "",
-            "required": true
+            "value": ""
         },
         "STAT_STICK": {
             "description": "The id of a sticker that shown in the start message",
