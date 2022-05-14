@@ -3,3 +3,4 @@ TgCrypto
 asyncio
 pymongo
 dnspython
+telegraph
