@@ -27,6 +27,8 @@ COMMANDS - /start /help /id /info /bots THESE WERE OUR COMMANS WE HAVE PUBLISHED
               reply_markup=InlineKeyboardMarkup( [[
                   InlineKeyboardButton("back", callback_data="start"),
                   InlineKeyboardButton("close", callback_data="close")
+                  ]]
+                  )
          )        
    elif data == "start":
          await msg.message.edit(
