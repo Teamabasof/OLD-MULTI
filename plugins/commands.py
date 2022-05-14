@@ -93,19 +93,10 @@ async def id_message(bot, message):
 ○MENTION : {message.from_user.mention}
 THANK YOU FOR USING BETA🤍""")
 
-@Client.on_message(
-    filters.command("dice") &
-    f_onw_fliter
-)
+@Client.on_message(filters.command("dice"))
 async def roll_dice(bot, message):
-    rep_mesg_id = message.message_id
-    if message.reply_to_message:
-        rep_mesg_id = message.reply_to_message.message_id
     await bot.send_dice(
-        chat_id=message.chat.id,
-        emoji="🎲",
-        disable_notification=True,
-        reply_to_message_id=rep_mesg_id
+        emoji="🎲"
     )
 
 @Client.on_message(filters.command("bots"))
