@@ -42,9 +42,9 @@ COMMANDS - /start /help /id /info /bots THESE WERE OUR COMMANS WE HAVE PUBLISHED
                      )
                  )
    elif data == "close":
-        await query.message.delete()
+        await msg.message.delete()
         try:
-            await query.message.reply_to_message.delete()
+            await msg.message.reply_to_message.delete()
         except:
             pass
 
