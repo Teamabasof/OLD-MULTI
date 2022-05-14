@@ -1,7 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
-from plugins.helper_func import f_onw_fliter
 import asyncio
 
 @Client.on_message(filters.command("start"))
