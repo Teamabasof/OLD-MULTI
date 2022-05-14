@@ -8,6 +8,11 @@
   <a href="https://github.com/Jeolpaul"><img src="http://readme-typing-svg.herokuapp.com?color=00FF00&center=true&vCenter=true&multiline=false&lines=HI!+I+AM+A+MULTI+BOT+WITH+MANY+FEATURES😀;FORK+ME+AND+DEPLOY+NOW😼;SUPPORT+US+BY+GIVING+A+STAR⭐;Developed+By+MR+MKN+AND+JEOL" alt="UwU">
 </p>
 
+### What is this bot
+
+This is a pyrogram based telagram bot. Telagram user id, info, telagrph, stickerid, fun, etc....
+
+
 ---------
 ### Developers 
 <a href="https://t.me/JP_Jeol"><img src="https://img.shields.io/badge/JP%20 JEOL-ReD.svg?style=for-the-badge&logo=Python"></a>
@@ -30,6 +35,3 @@
   
 
 
-# Deployment
-    
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Jeolpaul/pyrobotjeol"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=for-the-badge&logo=heroku" width="400" height="60"/></a></p>
