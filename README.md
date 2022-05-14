@@ -1,5 +1,5 @@
 
-# BETA MULTI BOT <img src="https://telegra.ph//file/53b5ad3b2774b8c47a7a6.jpg?color=black&logo=github&logoColor=black&style=social" alt="RELEASE">
+# TG MULTI BOT <img src="https://telegra.ph//file/53b5ad3b2774b8c47a7a6.jpg?color=black&logo=github&logoColor=black&style=social" alt="RELEASE">
 
 
 
