@@ -10,5 +10,4 @@ PICS = os.environ.get("PICS", "https://telegra.ph/file/34fd203eb89fd747ffb57.jpg
 
 ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMIN', '900873119').split()]
 
-DB_URL = os.environ.get("DB_URL","mongodb+srv://CK:CK@cluster0.spjef.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-
+DB_URL = os.environ.get("DB_URL", "")
