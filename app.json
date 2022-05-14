@@ -3,7 +3,7 @@
     "description": "Bot can Made by pyrogram",
     "stack": "container",
     "repository": "https://github.com/Jeolpaul/TG-MULTI-BOT",
-    "logo": "https://telegra.ph/file/1efb58ff08f0c68a5ae97.jpg",
+    "logo": "https://telegra.ph/file/f30ecbc3096c55380520c.jpg",
     "keywords": ["tgbot", "pyrogram", "telegram bot"],
     "env": {        
         "API_ID": {
