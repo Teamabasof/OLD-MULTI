@@ -23,7 +23,7 @@ COMMANDS - /start /help /id /info /bots THESE WERE OUR COMMANS WE HAVE PUBLISHED
 ║┣⪼📚ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ 
 ║┣⪼🗒️ᴠᴇʀsɪᴏɴ : 1.0.3  
 ║╰━━━━━━━━━━━━━━━➣
-╚══════════════════❍ """ 
+╚══════════════════❍ """,
               reply_markup=InlineKeyboardMarkup( [[
                   InlineKeyboardButton("back", callback_data="start"),
                   InlineKeyboardButton("close", callback_data="close")
