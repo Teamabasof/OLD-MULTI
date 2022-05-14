@@ -20,28 +20,6 @@
 </p>
 
 
-  ### My statistic
-
-<p align="center">
-  <a href="panteg"><img src="https://github-readme-stats.vercel.app/api?username=Jeolpaul&theme=tokyonight&show_icons=true" /></a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/Jeolpaul"><img src="https://github-readme-streak-stats.herokuapp.com?user=Lord-official&theme=tokyonight&hide_border=false&properties=background&border=%239611C5FF" /><a>
-</p>
- 
-  
-<p align="center">
-  <a href="https://github.com/Rlxfly"><img src="https://github-profile-trophy.vercel.app/?username=Jeolpaul&theme=radical&margin-w=20&no-bg=true&no-frame=false" /><a>
-</p>
-
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Jeolpaul&theme=monokai)
-
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Jeolpaul&label=VIEWS&style=flat-square&color=blue" />
-</p>
-
 # Deployment
     
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Jeolpaul/pyrobotjeol"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=for-the-badge&logo=heroku" width="400" height="60"/></a></p>
