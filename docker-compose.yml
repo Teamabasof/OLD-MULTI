@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  worker:
+    build: .
+    environment:
+      BOT_TOKEN: $BOT_TOKEN
+      API_ID: $API_ID
+      API_HASH: $API_HASH
+      FORCE_SUB: $FORCE_SUB
+      ADMIN: $ADMIN
+      DB_URL: $DB_URL
+      PICS: $PICS
+      STAT_STICK: $STAT_STICK
