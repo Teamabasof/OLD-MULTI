@@ -8,10 +8,15 @@ import asyncio
 async def callback(bot, msg):
    data = msg.data
    if data == "commands":
-       await msg.message.edit(
+       await msg.message.edit(       
            text="""HEY HERE YOU CAN FIND THE BASIC COMMANDS OF MINE.IF YOU DON'T KNOW HOW TO USE COMMAND JOIN SUPPORT GROUP AND ASK.
-COMMANDS - /start /help /id /info /bots THESE WERE OUR COMMANS WE HAVE PUBLISHED"""
-       )
+COMMANDS - /start /help /id /info /bots THESE WERE OUR COMMANS WE HAVE PUBLISHED""",       
+           reply_markup=InlineKeyboardMarkup( [[
+                  InlineKeyboardButton("back", callback_data="start"),
+                  InlineKeyboardButton("close", callback_data="close")
+                  ]]
+                  )
+           )
    elif data == "about":
          await msg.message.edit(
              text=""" 
