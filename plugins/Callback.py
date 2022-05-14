@@ -50,32 +50,32 @@ async def callback(bot, msg):
    elif data == "start":
          await msg.message.edit(
              text=f"Hello {msg.from_user.mention}👋🏻 I'am A Multi Bot with many usefull features. You can see My commands by below button",
-                 reply_markup=InlineKeyboardMarkup( [[
-                     InlineKeyboardButton("❣️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url="https://t.me/BETA_BOTSUPPORT"),
-                     InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/BETA_UPDATES")
-                     ],[            
-                     InlineKeyboardButton("ℹ️ 𝐇𝐄𝐋𝐏", callback_data="help"),
-                     InlineKeyboardButton("😉 𝐅𝐔𝐍", callback_data="fun")
-                     ],[
-                     InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 👨‍💻 ", callback_data="devs"),
-                     InlineKeyboardButton("🤖 𝐀𝐁𝐎𝐔𝐓", callback_data="about")
-                     ]]
-                     )
-                 )
+             reply_markup=InlineKeyboardMarkup( [[
+                  InlineKeyboardButton("❣️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url="https://t.me/BETA_BOTSUPPORT"),
+                  InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/BETA_UPDATES")
+                  ],[            
+                  InlineKeyboardButton("ℹ️ 𝐇𝐄𝐋𝐏", callback_data="help"),
+                  InlineKeyboardButton("😉 𝐅𝐔𝐍", callback_data="fun")
+                  ],[
+                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 👨‍💻 ", callback_data="devs"),
+                  InlineKeyboardButton("🤖 𝐀𝐁𝐎𝐔𝐓", callback_data="about")
+                  ]]
+                  )
+             )
    elif data == "devs":
          await msg.message.edit(
              text=f"This Bot will be made @JP_Jeol & @mr_MKN ",
-                 reply_markup=InlineKeyboardMarkup( [[
-                     InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 1", url="https://t.me/JP_Jeol"),
-                     InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 2", url="https://t.me/mr_MKN")
-                     ],[
-                     InlineKeyboardButton("❣️ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐂𝐎𝐃𝐄 ❣️", url="https://github.com/Jeolpaul/TG-MULTI-BOT"),
-                     ],[
-                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
-                     InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
-                     ]]
-                     )
-                 )
+             reply_markup=InlineKeyboardMarkup( [[
+                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 1", url="https://t.me/JP_Jeol"),
+                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 2", url="https://t.me/mr_MKN")
+                  ],[
+                  InlineKeyboardButton("❣️ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐂𝐎𝐃𝐄 ❣️", url="https://github.com/Jeolpaul/TG-MULTI-BOT"),
+                  ],[
+                  InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                  InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
+                  ]]
+                  )
+             )
    elif data == "fun":
          await msg.message.edit(
              text=f"""<b><u>JUS TEST THIS COMMANDS 😉</u></b>
@@ -90,12 +90,12 @@ async def callback(bot, msg):
 ◉ /bowling  
 ◉ /tenpins    
 """,      
-                 reply_markup=InlineKeyboardMarkup( [[
-                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
-                     InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
-                     ]]
-                     )
+             reply_markup=InlineKeyboardMarkup( [[
+                 InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                 InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
+                 ]]
                  )
+             )
    elif data == "botz":
          await msg.message.edit(
              text="🤖 This is My botz 😁",
