@@ -41,6 +41,7 @@
             "description": "Link of a image that shown in the start message"
             "value": ""
             "required": false
+       }
 
     },
     "buildpacks": [
