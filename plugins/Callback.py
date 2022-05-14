@@ -1,7 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton                              
 from pyrogram.types import CallbackQuery
-from config import FORCE_SUB
 import asyncio
 
 
