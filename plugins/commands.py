@@ -31,10 +31,11 @@ async def start_message(bot, message):
             InlineKeyboardButton("❣️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url="https://t.me/BETA_BOTSUPPORT"),
             InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/BETA_UPDATES")
             ],[            
-            InlineKeyboardButton("🤖 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒", callback_data="commands"),
-            InlineKeyboardButton("ℹ️ 𝐀𝐁𝐎𝐔𝐓", callback_data="about")
+            InlineKeyboardButton("ℹ️ 𝐇𝐄𝐋𝐏", callback_data="help"),
+            InlineKeyboardButton("😉 𝐅𝐔𝐍", callback_data="fun")
             ],[
-            InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 👨‍💻 ", url="https://t.me/JP_Jeol")
+            InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 👨‍💻 ", callback_data="devs"),
+            InlineKeyboardButton("🤖 𝐀𝐁𝐎𝐔𝐓", callback_data="about")
             ]]
             )
         )
@@ -53,19 +54,6 @@ async def id_message(bot, message):
 
 THANK YOU FOR USING BETA❣️</i>""")
 
-@Client.on_message(filters.command("bots"))
-async def bots_message(bot, message):
-    await message.reply_text(
-        text=f"""Hey {message.from_user.mention}
-👇🏻👇🏻👇🏻HERE IS OUR BOTS LIST👇🏻👇🏻👇🏻""",
-        reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("ℹ️ 𝐈𝐍𝐅𝐎 𝐁𝐎𝐓", url="https://t.me/get_id_beta_bot"),
-            InlineKeyboardButton("🎵 𝐌𝐔𝐒𝐈𝐂 𝐁𝐎𝐓", url="https://t.me/Kochirajavu_musicbot")
-            ],[
-            InlineKeyboardButton("🎖️ 𝐆𝐑𝐎𝐔𝐏 𝐌𝐀𝐍𝐀𝐆𝐄𝐑 🎖️", url="https://t.me/BETA_GROUPMANAGBOT")
-            ]]
-            )
-        )
 
 @Client.on_message(filters.command(["stickerid"]))
 async def stickerid(bot, message):   
