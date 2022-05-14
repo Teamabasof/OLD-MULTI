@@ -10,7 +10,16 @@ async def callback(bot, msg):
    if data == "commands":
        await msg.message.edit(       
            text="""HEY HERE YOU CAN FIND THE BASIC COMMANDS OF MINE.IF YOU DON'T KNOW HOW TO USE COMMAND JOIN SUPPORT GROUP AND ASK.
-COMMANDS - /start /help /id /info /bots THESE WERE OUR COMMANS WE HAVE PUBLISHED""",       
+
+<b><u>COMMANDS</u></b>
+
+◉ /start - check bot alive
+◉ /help - get help
+◉ /id - your tg id & info
+◉ /stickerid - Reply To Any Sticker to get sticker id
+◉ /dice - just fun 😉
+◉ /bots - list of my bots
+""",       
            reply_markup=InlineKeyboardMarkup( [[
                   InlineKeyboardButton("back", callback_data="start"),
                   InlineKeyboardButton("close", callback_data="close")
