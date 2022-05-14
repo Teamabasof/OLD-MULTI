@@ -3,10 +3,9 @@
 </p>
 
 ---------
-
-[![JEOL](https://img.shields.io/badge/Telegram-00BFFF?style=for-the-badge&logo=Telegram&logoColor=white)](https://instagram.com/_je_ol_?igshid=YmMyMTA2M2Y=)
- [![MKN](https://img.shields.io/badge/Telegram-00BFFF?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/JP_Jeol)
-
+### Developers 
+<a href="https://t.me/JP_Jeol"><img src="https://img.shields.io/badge/JP%20 JEOL-ReD.svg?style=for-the-badge&logo=Python"></a>
+<a href="https://t.me/mr_MKN"><img src="https://img.shields.io/badge/MR%20 MKN-ReD.svg?style=for-the-badge&logo=Python"></a>
 ---------
 
 <p align="center">
