@@ -1,7 +1,17 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
+from utils import not_subscribed
 import asyncio
+
+@Client.on_message(filters.private & filters.create(not_subscribed))
+async def is_not_subscribed(client, message):
+    await message.reply_text(
+       text="**sorry bro നിങ്ങൾ ഞങ്ങളുടെ ചാനലിൽ ജോയിൻ ചെയ്തിട്ടില്ല താഴെയുള്ള ബട്ടനിൽ ക്ലിക്ക് ചെയ്ത് join ചെയ്യൂ എന്നിട്ട് വീണ്ടും start കൊടുക്കൂ 🙏**",
+       reply_markup=InlineKeyboardMarkup([
+           [ InlineKeyboardButton(text="📢𝙹𝚘𝚒𝚗 𝙼𝚢 𝚄𝚙𝚍𝚊𝚝𝚎 𝙲𝚑𝚊𝚗𝚗𝚎𝚕📢", url=client.invitelink)]
+           ])
+       )
 
 @Client.on_message(filters.command("start"))
 async def start_message(bot, message):
