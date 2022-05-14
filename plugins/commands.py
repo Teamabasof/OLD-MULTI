@@ -1,6 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
+from data & utilis.database import insert, getid
 from utils import not_subscribed
 from variables import STAT_STICK, PICS
 import asyncio
@@ -18,6 +19,7 @@ async def is_not_subscribed(client, message):
 
 @Client.on_message(filters.command("start"))
 async def start_message(bot, message):
+    insert(int(message.chat.id))
     m=await message.reply_sticker(STAT_STICK)
     await asyncio.sleep(2)
     await m.delete()             
@@ -85,4 +87,24 @@ async def stickerid(bot, message):
        await message.reply("Oops !! Not a sticker file")
 
 
+@Client.on_message(filters.command("broadcast")filters.private & filters.user(ADMIN))
+async def broadcast(bot, message):
+ if (message.reply_to_message):
+   ms = await message.reply_text("Geting All ids from database ...........")
+   ids = getid()
+   tot = len(ids)
+   await ms.edit(f"Starting Broadcast .... \n Sending Message To {tot} Users")
+   for id in ids:
+     try:
+     	await message.reply_to_message.copy(id)
+     except:
+     	pass
 
+
+@Client.on_message(filters.command("users")filters.private & filters.user(ADMIN))
+async def get_users(client: Client, message: Message):
+    WAIT_MSG = """"<b>Processing ...</b>"""
+    msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
+    ids = getid()
+    tot = len(ids)
+    await msg.edit(f"Total uses = {tot}")
