@@ -3,7 +3,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 from data & utilis.database import insert, getid
 from data & utilis.utils import not_subscribed
-from variables import STAT_STICK, PICS
+from variables import STAT_STICK, PICS, ADMIN
 import asyncio
 import random
 
