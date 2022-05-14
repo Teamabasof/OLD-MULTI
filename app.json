@@ -1,25 +1,25 @@
 {
-    "name": "Jeol Pyrogram",
+    "name": "Jeol multi bot",
     "description": "Bot can Made by pyrogram",
     "stack": "container",
     "repository": "https://github.com/Jeolpaul/JEOLBOT",
+    "logo": "https://telegra.ph/file/1efb58ff08f0c68a5ae97.jpg",
     "keywords": ["tgbot", "pyrogram", "telegram bot"],
-    "env": {
-        "BOT_TOKEN": {
-            "description": "Your Bot token from @Botfather",
-            "value": "5235245424:AAGt8l7zfDUxXoG7NMnM5ejcAX-gxnWO6zI"
-        },
+    "env": {        
         "API_ID": {
             "description": "Your API_ID from https://my.telegram.org/apps",
             "value": "11271918"
         },
         "API_HASH": {
             "description": "Your API_HASH from https://my.telegram.org/apps",       
-            "value": "1cd29c2b7e1df5f18aeaeafbf7ebf7cd" 
-        }
+            "value": "1cd29c2b7e1df5f18aeaeafbf7ebf7cd"
+        },
+        "BOT_TOKEN": {
+            "description": "Your Bot token from @Botfather",
+            "value": "5235245424:AAGt8l7zfDUxXoG7NMnM5ejcAX-gxnWO6zI"
         },
         "FORCE_SUB": {
-            "description": "Your API_HASH from https://my.telegram.org/apps",       
+            "description": "Your Force Subscribe Channel username without @ linke this :- mkn_bots_updates.",       
             "value": "" 
         }
     },
