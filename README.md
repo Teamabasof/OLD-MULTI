@@ -15,7 +15,7 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagrph, sticker
 
 ### Deploy to Heroku
 
-⚠️edit redmi.md templates= link to your rep link and deploye  🙏 avoid source cod violation 
+⚠️edit readme.md templates= link to your repo link and deploy  🙏 avoid source code violation 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jeolpaul/pyrobotjeol)
 
