@@ -26,7 +26,7 @@ async def start_message(bot, message):
     await m.delete()             
     await message.reply_photo(
         photo=random.choice(PICS),
-        caption=f"Hello {message.from_user.mention}👋🏻 How are you Iam The official BETA BOT Type /bots to see our bot list",
+        caption=f"Hello {message.from_user.mention}👋🏻 I'am A Multi Bot with many usefull features. You can see My commands by below button",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Support", url="https://t.me/BETA_BOTSUPPORT"),
             InlineKeyboardButton("Updates", url="https://t.me/BETA_UPDATES")
