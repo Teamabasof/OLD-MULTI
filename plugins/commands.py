@@ -53,10 +53,6 @@ async def id_message(bot, message):
 
 THANK YOU FOR USING BETA❣️</i>""")
 
-@Client.on_message(filters.command("dice"))
-async def roll_dice(bot, message):
-    await bot.send_dice(message.chat.id, "🎲")
-
 @Client.on_message(filters.command("bots"))
 async def bots_message(bot, message):
     await message.reply_text(
