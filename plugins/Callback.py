@@ -16,9 +16,10 @@ async def callback(bot, msg):
 ◉ /start - check bot alive
 ◉ /help - get help
 ◉ /id - your tg id & info
+◉ /telegraph - to get telegraph link💯
 ◉ /stickerid - Reply To Any Sticker to get sticker id
 ◉ /dice - just fun 😉
-◉ /bots - list of my bots
+◉ /bots - list of our bots🤖
 """,       
            reply_markup=InlineKeyboardMarkup( [[
                   InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
