@@ -26,22 +26,22 @@
             "description": "Your database from mongodb",
             "value": ""
             "required": true
-       },
-       "ADMIN": {
+        },
+        "ADMIN": {
             "description": "Your telagram user id to control this bot eg:- 5781982",
             "value": ""
             "required": true
-       },
-       "STAT_STICK": {
+        },
+        "STAT_STICK": {
             "description": "The id of a sticker that shown in the start message",
             "value": ""
             "required": false
-       },
-       "PICS": {
+        },
+        "PICS": {
             "description": "Link of a image that shown in the start message"
             "value": ""
             "required": false
-       }
+        }
 
     },
     "buildpacks": [
