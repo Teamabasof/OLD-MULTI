@@ -17,7 +17,7 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagrph, sticker
 
 ⚠️ Edit readme.md templates= link to your repo link and deploy  🙏 avoid source code violation 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jeolpaul/pyrobotjeol)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jeolpaul/TG-MULTI-BOT)
 
 ## Deploy in okteto
  [![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com)               
