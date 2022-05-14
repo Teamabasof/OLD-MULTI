@@ -17,6 +17,11 @@
             "description": "Your API_HASH from https://my.telegram.org/apps",       
             "value": "1cd29c2b7e1df5f18aeaeafbf7ebf7cd" 
         }
+        },
+        "FORCE_SUB": {
+            "description": "Your API_HASH from https://my.telegram.org/apps",       
+            "value": "" 
+        }
     },
     "buildpacks": [
         {
