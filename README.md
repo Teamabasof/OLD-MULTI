@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://github.com/Jeolpaul"><img src="http://readme-typing-svg.herokuapp.com?color=00FF00&center=true&vCenter=true&multiline=false&lines=HI!+I+AM+JEOL;Im+a+Newbie😼" alt="UwU">
+  <a href="https://github.com/Jeolpaul"><img src="http://readme-typing-svg.herokuapp.com?color=00FF00&center=true&vCenter=true&multiline=false&lines=HI!+I+AM+A+MULTI+BOT+WITH+MANY+FEATURES😀;FORK+ME+AND+DEPLOY+NOW😼;SUPPORT+US+BY+GIVING+A+STAR⭐;Developed+By+MR+MKN+AND+JEOL" alt="UwU">
 </p>
 
 ---------
 
-[![Instagram](https://img.shields.io/badge/Instagram-ff63f0?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/_je_ol_?igshid=YmMyMTA2M2Y=)
- [![Telegram](https://img.shields.io/badge/Telegram-00BFFF?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/JP_Jeol)
+[![JEOL](https://img.shields.io/badge/Telegram-00BFFF?style=for-the-badge&logo=Telegram&logoColor=white)](https://instagram.com/_je_ol_?igshid=YmMyMTA2M2Y=)
+ [![MKN](https://img.shields.io/badge/Telegram-00BFFF?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/JP_Jeol)
 
 ---------
 
