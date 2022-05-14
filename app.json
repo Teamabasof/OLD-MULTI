@@ -2,7 +2,7 @@
     "name": "Jeol multi bot",
     "description": "Bot can Made by pyrogram",
     "stack": "container",
-    "repository": "https://github.com/Jeolpaul/JEOLBOT",
+    "repository": "https://github.com/Jeolpaul/pyrobotjeol",
     "logo": "https://telegra.ph/file/1efb58ff08f0c68a5ae97.jpg",
     "keywords": ["tgbot", "pyrogram", "telegram bot"],
     "env": {        
