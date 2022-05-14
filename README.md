@@ -20,7 +20,7 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagrph, sticker
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jeolpaul/pyrobotjeol)
 
 ## Deploy in okteto
- [![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com/deploy?repository=https://github.com/Jeolpaul/pyrobotjeol-Bot&vars=[{"name":"BOT_TOKEN","value":"0"}{"name":"API_ID","value":"0"}{"name":"API_HASH","value":"0"}{"name":"FORCE_SUB","value":"0"}{"name":"ADMIN","value":"0"}{"name":"DB_URL","value":"0"}{"name":"PICS","value":"0"}{"name":"STAT_STICK","value":"0"}])                  
+ [![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com/deploy?repository=https://github.com/Jeolpaul/pyrobotjeol-Bot&vars=[{"name":"BOT_TOKEN","value":"0"}][{"name":"API_ID","value":"0"}][{"name":"API_HASH","value":"0"}][{"name":"FORCE_SUB","value":"0"}][{"name":"ADMIN","value":"0"}][{"name":"DB_URL","value":"0"}][{"name":"PICS","value":"0"}][{"name":"STAT_STICK","value":"0"}])                  
 
 
 ---------
