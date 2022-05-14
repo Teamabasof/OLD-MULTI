@@ -95,7 +95,7 @@ THANK YOU FOR USING BETA🤍""")
 
 @Client.on_message(filters.command("dice"))
 async def roll_dice(bot, message):
-    await bot.send_dice(
+    await message.reply_emoji(
         emoji="🎲"
     )
 
