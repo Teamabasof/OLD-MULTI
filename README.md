@@ -13,6 +13,10 @@
 This is a pyrogram based telagram bot. Telagram user id, info, telagrph, stickerid, fun, etc....
 
 
+### Deploy to Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrMKN/Renamer-Pro-v3.0)
+
+
 ---------
 ### Developers 
 <a href="https://t.me/JP_Jeol"><img src="https://img.shields.io/badge/JP%20 JEOL-ReD.svg?style=for-the-badge&logo=Python"></a>
