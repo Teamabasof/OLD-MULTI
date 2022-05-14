@@ -32,7 +32,8 @@ async def start_message(bot, message):
                      InlineKeyboardButton("Updates", url="https://t.me/BETA_UPDATES")
                      ],[
                      InlineKeyboardButton("Developer", url="https://t.me/JP_Jeol"),
-                     InlineKeyboardButton("commands", callback_data="commands")
+                     InlineKeyboardButton("commands", callback_data="commands"),
+                     InlineKeyboardButton("about", callback_data="about")
                      ]]
                      )
                  )
