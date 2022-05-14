@@ -18,10 +18,13 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagrph, sticker
 <a href="https://t.me/JP_Jeol"><img src="https://img.shields.io/badge/JP%20 JEOL-ReD.svg?style=for-the-badge&logo=Python"></a>
 <a href="https://t.me/mr_MKN"><img src="https://img.shields.io/badge/MR%20 MKN-ReD.svg?style=for-the-badge&logo=Python"></a>
 ---------
-
 <p align="center">
-  <img src="https://img.shields.io/badge/-Python-black?style=flat-square&logo=python" />
-    
+  <a href="https://www.python.org">
+    <img src="http://ForTheBadge.com/images/badges/made-with-python.svg">
+
+  </a>
+</p>
+</p>
 ---------
 
 </p>
