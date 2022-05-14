@@ -2,7 +2,10 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 from utils import not_subscribed
+from config import STAT_STICK, PICS, DELAY 
 import asyncio
+import random
+
 
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
@@ -15,11 +18,12 @@ async def is_not_subscribed(client, message):
 
 @Client.on_message(filters.command("start"))
 async def start_message(bot, message):
-    m=await message.reply_sticker("CAACAgUAAxkBAAIBU2J-N7WIdJobwDnajHerWD7aD-IwAAKeBAACf7TwVxZUQiDRe7p1JAQ")
+    m=await message.reply_sticker(STAT_STICK)
     await asyncio.sleep(2)
     await m.delete()             
-    await message.reply_text(
-        text=f"Hello {message.from_user.mention}👋🏻 How are you Iam The official BETA BOT Type /bots to see our bot list",
+    await message.reply_photo(
+        photo=random.choice(PICS),
+        caption=f"Hello {message.from_user.mention}👋🏻 How are you Iam The official BETA BOT Type /bots to see our bot list",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Support", url="https://t.me/BETA_BOTSUPPORT"),
             InlineKeyboardButton("Updates", url="https://t.me/BETA_UPDATES")
