@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 from data & utilis.database import insert, getid
-from utils import not_subscribed
+from data & utilis.utils import not_subscribed
 from variables import STAT_STICK, PICS
 import asyncio
 import random
