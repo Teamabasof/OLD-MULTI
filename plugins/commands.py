@@ -23,6 +23,7 @@ async def is_not_subscribed(client, message):
 async def start_message(bot, message):
     insert(int(message.chat.id))
     await message.reply_chat_action(enums.ChatAction.TYPING)
+    await asyncio.sleep(1)
     m=await message.reply_sticker(STAT_STICK)
     await asyncio.sleep(2)
     await m.delete()             
