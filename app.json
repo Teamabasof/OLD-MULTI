@@ -21,7 +21,27 @@
         "FORCE_SUB": {
             "description": "Your Force Subscribe Channel username without @ linke this :- mkn_bots_updates.",       
             "value": "" 
-        }
+        },
+        "DB_URL": {
+            "description": "Your database from mongodb",
+            "value": ""
+            "required": true
+       },
+       "ADMIN": {
+            "description": "Your telagram user id to control this bot eg:- 5781982",
+            "value": ""
+            "required": true
+       },
+       "STAT_STICK": {
+            "description": "The id of a sticker that shown in the start message",
+            "value": ""
+            "required": false
+       },
+       "PICS": {
+            "description": "Link of a image that shown in the start message"
+            "value": ""
+            "required": false
+
     },
     "buildpacks": [
         {
