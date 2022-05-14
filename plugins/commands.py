@@ -28,39 +28,30 @@ async def start_message(bot, message):
         photo=random.choice(PICS),
         caption=f"Hello {message.from_user.mention}👋🏻 I'am A Multi Bot with many usefull features. You can see My commands by below button",
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("Support", url="https://t.me/BETA_BOTSUPPORT"),
-            InlineKeyboardButton("Updates", url="https://t.me/BETA_UPDATES")
+            InlineKeyboardButton("❣️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url="https://t.me/BETA_BOTSUPPORT"),
+            InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/BETA_UPDATES")
+            ],[            
+            InlineKeyboardButton("🤖 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒", callback_data="commands"),
+            InlineKeyboardButton("ℹ️ 𝐀𝐁𝐎𝐔𝐓", callback_data="about")
             ],[
-            InlineKeyboardButton("Developer", url="https://t.me/JP_Jeol"),
-            InlineKeyboardButton("commands", callback_data="commands"),
-            InlineKeyboardButton("about", callback_data="about")
+            InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 👨‍💻 ", url="https://t.me/JP_Jeol")
             ]]
             )
         )
          
-@Client.on_message(filters.command("help"))
-async def help_message(bot, message):
-    await message.reply_photo(
-        photo="https://telegra.ph//file/e937426b58e31a881c25f.jpg",
-        caption="""Hey how can i help You. 
-To see our bot list type /bots
-If you have any questions join support
-Group and ask🤍❤️
-Thank you for using Beta"""
-    )
-
-
 @Client.on_message(filters.command("id"))
 async def id_message(bot, message):
     await message.reply_text(
-    text = f"""
-👁️‍🗨️DETAILS
-○ID : <code>{message.from_user.id}</code>
-○FIRST NAME : {message.from_user.first_name}
-○LAST NAME : {message.from_user.last_name}
-○USERNAME : @{message.from_user.username}
-○MENTION : {message.from_user.mention}
-THANK YOU FOR USING BETA🤍""")
+    text = f"""<i>
+<u>👁️‍🗨️DETAILS</u>
+
+♂️ID : <code>{message.from_user.id}</code>
+♀️FIRST NAME : {message.from_user.first_name}
+⚡️LAST NAME : {message.from_user.last_name}
+⚜️USERNAME : @{message.from_user.username}
+🔅MENTION : {message.from_user.mention}
+
+THANK YOU FOR USING BETA❣️</i>""")
 
 @Client.on_message(filters.command("dice"))
 async def roll_dice(bot, message):
@@ -72,10 +63,10 @@ async def bots_message(bot, message):
         text=f"""Hey {message.from_user.mention}
 👇🏻👇🏻👇🏻HERE IS OUR BOTS LIST👇🏻👇🏻👇🏻""",
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("INFO BOT", url="https://t.me/get_id_beta_bot"),
-            InlineKeyboardButton("MUSIC BOT", url="https://t.me/Kochirajavu_musicbot")
+            InlineKeyboardButton("ℹ️ 𝐈𝐍𝐅𝐎 𝐁𝐎𝐓", url="https://t.me/get_id_beta_bot"),
+            InlineKeyboardButton("🎵 𝐌𝐔𝐒𝐈𝐂 𝐁𝐎𝐓", url="https://t.me/Kochirajavu_musicbot")
             ],[
-            InlineKeyboardButton("GROUP MANAGER", url="https://t.me/BETA_GROUPMANAGBOT")
+            InlineKeyboardButton("🎖️ 𝐆𝐑𝐎𝐔𝐏 𝐌𝐀𝐍𝐀𝐆𝐄𝐑 🎖️", url="https://t.me/BETA_GROUPMANAGBOT")
             ]]
             )
         )
