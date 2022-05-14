@@ -7,6 +7,7 @@ from variables import STAT_STICK, PICS, ADMIN
 import asyncio
 import random
 
+WAIT_MSG = """"<b>Processing ...</b>"""
 
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
@@ -102,8 +103,7 @@ async def broadcast(bot, message):
 
 
 @Client.on_message(filters.command("users")filters.private & filters.user(ADMIN))
-async def get_users(client: Client, message: Message):
-    WAIT_MSG = """"<b>Processing ...</b>"""
+async def get_users(client: Client, message: Message):    
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
     ids = getid()
     tot = len(ids)
