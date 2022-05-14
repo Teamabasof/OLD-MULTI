@@ -14,7 +14,7 @@ COMMANDS - /start /help /id /info /bots THESE WERE OUR COMMANS WE HAVE PUBLISHED
        )
    elif data == "about":
          await msg.message.edit(
-             text=""""
+             text=""" 
 ╔════❰ 𝙼𝚄𝙻𝚃𝙸 𝙱𝙾𝚃 ❱═❍
 ║╭━━━━━━━━━━━━━━━➣
 ║┣⪼👦ᴄʀᴇᴀᴛᴏʀ : ᴊᴇᴏʟᴘᴀᴜʟ
@@ -23,12 +23,30 @@ COMMANDS - /start /help /id /info /bots THESE WERE OUR COMMANS WE HAVE PUBLISHED
 ║┣⪼📚ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ 
 ║┣⪼🗒️ᴠᴇʀsɪᴏɴ : 1.0.3  
 ║╰━━━━━━━━━━━━━━━➣
-╚══════════════════❍  
-"""
-         )     
-
-
-
+╚══════════════════❍ """ 
+              reply_markup=InlineKeyboardMarkup( [[
+                  InlineKeyboardButton("back", callback_data="start"),
+                  InlineKeyboardButton("close", callback_data="close")
+         )        
+   elif data == "start":
+         await msg.message.edit(
+             text=f"Hello {msg.from_user.mention}👋🏻 How are you Iam The official BETA BOT Type /bots to see our bot list",
+                 reply_markup=InlineKeyboardMarkup( [[
+                     InlineKeyboardButton("Support", url="https://t.me/BETA_BOTSUPPORT"),
+                     InlineKeyboardButton("Updates", url="https://t.me/BETA_UPDATES")
+                     ],[
+                     InlineKeyboardButton("Developer", url="https://t.me/JP_Jeol"),
+                     InlineKeyboardButton("commands", callback_data="commands"),
+                     InlineKeyboardButton("about", callback_data="about")
+                     ]]
+                     )
+                 )
+   elif data == "close":
+        await query.message.delete()
+        try:
+            await query.message.reply_to_message.delete()
+        except:
+            pass
 
 
 
