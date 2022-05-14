@@ -31,7 +31,7 @@ async def callback(bot, msg):
              text=f""" 
 ╔════❰ 𝙼𝚄𝙻𝚃𝙸 𝙱𝙾𝚃 ❱═❍
 ║╭━━━━━━━━━━━━━━━➣
-║┣⪼🤖ᴍʏ ɴᴀᴍᴇ : {client.mention}
+║┣⪼🤖ᴍʏ ɴᴀᴍᴇ : {bot.mention}
 ║┣⪼👦ᴅᴇᴠ 1 : <a href=https://t.me/JP_Jeol>ᴊᴇᴏʟᴘᴀᴜʟ</a>
 ║┣⪼👨‍💻ᴅᴇᴠ 2 : <a href=https://t.me/mr_MKN>ᴍʀ.ᴍᴋɴ ᴛɢ</a>
 ║┣⪼📡ʜᴏsᴛᴇᴅ ᴏɴ : <a href=https://dashboard.heroku.com>ʜᴇʀᴏᴋᴜ</a>
