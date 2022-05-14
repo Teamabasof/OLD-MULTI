@@ -21,8 +21,8 @@ async def callback(bot, msg):
 ◉ /bots - list of my bots
 """,       
            reply_markup=InlineKeyboardMarkup( [[
-                  InlineKeyboardButton("back", callback_data="start"),
-                  InlineKeyboardButton("close", callback_data="close")
+                  InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                  InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                   ]]
                   )
            )
@@ -42,8 +42,8 @@ async def callback(bot, msg):
 ╚══════════════════❍ """,
               disable_web_page_preview = True,
               reply_markup=InlineKeyboardMarkup( [[
-                  InlineKeyboardButton("back", callback_data="start"),
-                  InlineKeyboardButton("close", callback_data="close")
+                  InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                  InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                   ]]
                   )
          )        
@@ -51,12 +51,13 @@ async def callback(bot, msg):
          await msg.message.edit(
              text=f"Hello {msg.from_user.mention}👋🏻 How are you Iam The official BETA BOT Type /bots to see our bot list",
                  reply_markup=InlineKeyboardMarkup( [[
-                     InlineKeyboardButton("Support", url="https://t.me/BETA_BOTSUPPORT"),
-                     InlineKeyboardButton("Updates", url="https://t.me/BETA_UPDATES")
+                     InlineKeyboardButton("❣️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url="https://t.me/BETA_BOTSUPPORT"),
+                     InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/BETA_UPDATES")
+                     ],[            
+                     InlineKeyboardButton("🤖 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒", callback_data="commands"),
+                     InlineKeyboardButton("ℹ️ 𝐀𝐁𝐎𝐔𝐓", callback_data="about")
                      ],[
-                     InlineKeyboardButton("Developer", url="https://t.me/JP_Jeol"),
-                     InlineKeyboardButton("commands", callback_data="commands"),
-                     InlineKeyboardButton("about", callback_data="about")
+                     InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 👨‍💻 ", url="https://t.me/JP_Jeol")
                      ]]
                      )
                  )
