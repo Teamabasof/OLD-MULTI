@@ -14,7 +14,7 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagrph, sticker
 
 
 ### Deploy to Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrMKN/Renamer-Pro-v3.0)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jeolpaul/pyrobotjeol)
 
 
 ---------
