@@ -38,7 +38,7 @@
             "required": false
         },
         "PICS": {
-            "description": "Link of a image that shown in the start message",
+            "description": "Add some telegraph link of pictures do to shown in the start message. multiple pics use 1 space to split the image",
             "required": false
         }
 
