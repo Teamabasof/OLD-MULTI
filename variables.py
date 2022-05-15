@@ -11,3 +11,5 @@ PICS = os.environ.get("PICS", "https://telegra.ph/file/34fd203eb89fd747ffb57.jpg
 ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMIN', '900873119').split()]
 
 DB_URL = os.environ.get("DB_URL", "")
+
+DELAY = int(os.environ.get("DELAY", "1"))
