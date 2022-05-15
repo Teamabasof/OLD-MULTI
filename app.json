@@ -37,6 +37,10 @@
             "description": "The id of a sticker that shown in the start message",
             "required": false
         },
+        "DELAY": {
+            "description": "chat action & start strikr delay in second",
+            "required": false
+        },
         "PICS": {
             "description": "Add some telegraph link of pictures do to shown in the start message. multiple pics use 1 space to split the image",
             "required": false
