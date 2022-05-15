@@ -54,32 +54,32 @@ IKKA_STRINGS = (
     "CAACAgUAAxkBAAIDkmIN87LWn-56jo9wHTdifHsdBCAiAAJPAwACK4yZVlCyU1tXbk2YHgQ",
 )   
 
-@Client.on_message(filters.command("dice"))
+@Client.on_message(filters.private & filters.command("dice"))
 async def roll_dice(bot, message):
     await bot.send_dice(message.chat.id, "🎲")
 
-@Client.on_message(filters.command("arrow"))                                      
+@Client.on_message(filters.private & filters.command("arrow"))                                      
 async def roll_arrow(bot, message):
     await bot.send_dice(message.chat.id, "🎯")
 
-@Client.on_message(filters.command("goal"))
+@Client.on_message(filters.private & filters.command("goal"))
 async def roll_goal(bot, message):
     await bot.send_dice(message.chat.id, "⚽️")
 
-@Client.on_message(filters.command("luck"))
+@Client.on_message(filters.private & filters.command("luck"))
 async def roll_luck(bot, message):
     await bot.send_dice(message.chat.id, "🎰")
 
-@Client.on_message(filters.command("throw"))
+@Client.on_message(filters.private & filters.command("throw"))
 async def roll_throw(bot, message):
     await bot.send_dice(message.chat.id, "🏀")
 
-@Client.on_message(filters.command(["bowling", "tenpins"]))
+@Client.on_message(filters.private & filters.command(["bowling", "tenpins"]))
 async def roll_bowling(bot, message):
     await bot.send_dice(message.chat.id, "🎳")
 
 
-@Client.on_message(filters.command("runs") &
+@Client.on_message(filters.private & filters.command("runs") &
     f_onw_fliter
 )
 async def runs(bot, message):
@@ -90,8 +90,7 @@ async def runs(bot, message):
     else:
         await message.reply_text(effective_string)
 
-@Client.on_message(
-    filters.command("ikka") &
+@Client.on_message(filters.private & filters.command("ikka") &
     f_onw_fliter
 )
 async def ikka(bot, message):
