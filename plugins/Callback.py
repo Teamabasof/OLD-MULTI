@@ -13,9 +13,17 @@ async def callback(bot, msg):
 
 <b><u>COMMANDS</u></b>
 
+◉ send channel last message with
+  forwerd tag to get the channel id 💯
+
 ◉ /id - your tg id & info
-◉ /telegraph - to get telegraph link💯
+
+◉ /telegraph - reply to below 5Mb media
+  to get telegraph link💯
+
 ◉ /stickerid - Reply To Any Sticker to get sticker id
+
+🤩THANKS FOR USING ME😍
 """,       
            reply_markup=InlineKeyboardMarkup( [[
                   InlineKeyboardButton("🤖 𝐌𝐘 𝐁𝐎𝐓𝐒", callback_data="botz")
@@ -49,7 +57,7 @@ async def callback(bot, msg):
          )        
    elif data == "start":
          await msg.message.edit(
-             text=f"Hello {msg.from_user.mention}👋🏻 I'am A Multi Bot with many usefull features. You can see My commands by below button",
+             text=f"Hello {msg.from_user.mention}👋🏻\nI'am A Multi use Bot with many usefull features.\neg:- Telegarph, Channel ID, User ID, Fun, Group Id etc...\nYou can see My commands by below button... \n\n◉ send channel last message with forwerd tag to get the channel id 💯",          
              reply_markup=InlineKeyboardMarkup( [[
                   InlineKeyboardButton("❣️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url="https://t.me/BETA_BOTSUPPORT"),
                   InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/BETA_UPDATES")
