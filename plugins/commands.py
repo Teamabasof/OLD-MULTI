@@ -29,7 +29,7 @@ async def start_message(bot, message):
     await m.delete()             
     await message.reply_photo(
         photo=random.choice(PICS),
-        caption=f"Hello {message.from_user.mention}👋🏻 I'am A Multi Bot with many usefull features. You can see My commands by below button",
+        caption=f"Hello {message.from_user.mention}👋🏻\nI'am A Multi use Bot with many usefull features.\neg:- Telegarph, Channel ID, User ID, Fun, Group Id etc...\nYou can see My commands by below button... \n\n◉ send channel last message with forwerd tag to get the channel id 💯",               
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("❣️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url="https://t.me/BETA_BOTSUPPORT"),
             InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/BETA_UPDATES")
