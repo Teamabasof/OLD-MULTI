@@ -3,7 +3,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 from helper.database import insert, getid
 from helper.utils import not_subscribed
-from variables import STAT_STICK, PICS, ADMIN
+from variables import STAT_STICK, PICS, ADMIN, DELAY
 from pyrogram import enums
 import asyncio
 import random
@@ -19,13 +19,13 @@ async def is_not_subscribed(client, message):
            ])
        )
 
-@Client.on_message(filters.command("start"))
+@Client.on_message(filters.private & filters.command("start"))
 async def start_message(bot, message):
     insert(int(message.chat.id))
     await message.reply_chat_action(enums.ChatAction.TYPING)
-    await asyncio.sleep(1)
+    await asyncio.sleep(DELAY)
     m=await message.reply_sticker(STAT_STICK)
-    await asyncio.sleep(2)
+    await asyncio.sleep(DELAY)
     await m.delete()             
     await message.reply_photo(
         photo=random.choice(PICS),
@@ -43,7 +43,7 @@ async def start_message(bot, message):
             )
         )
          
-@Client.on_message(filters.command("id"))
+@Client.on_message(filters.private & filters.command("id"))
 async def id_message(bot, message):
     await message.reply_text(
     text = f"""<i>
@@ -54,11 +54,12 @@ async def id_message(bot, message):
 ⚡️LAST NAME : {message.from_user.last_name}
 ⚜️USERNAME : @{message.from_user.username}
 🔅MENTION : {message.from_user.mention}
+📎YOUR LINK : https://t.me/{message.from_user.username}
 
 THANK YOU FOR USING BETA❣️</i>""")
 
 
-@Client.on_message(filters.command(["stickerid"]))
+@Client.on_message(filters.private & filters.command(["stickerid"]))
 async def stickerid(bot, message):   
     if message.reply_to_message.sticker:
        await message.reply(f"**Sticker ID is**  \n `{message.reply_to_message.sticker.file_id}` \n \n ** Unique ID is ** \n\n`{message.reply_to_message.sticker.file_unique_id}`", quote=True)
