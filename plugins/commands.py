@@ -4,7 +4,6 @@ from pyrogram.errors import UserNotParticipant
 from helper.database import insert, getid
 from helper.utils import not_subscribed
 from variables import STAT_STICK, PICS, ADMIN, DELAY
-from pyrogram import enums
 import asyncio
 import random
 
@@ -22,7 +21,7 @@ async def is_not_subscribed(client, message):
 @Client.on_message(filters.private & filters.command("start"))
 async def start_message(bot, message):
     insert(int(message.chat.id))
-    await message.reply_chat_action(enums.ChatAction.TYPING)
+    await message.reply_chat_action("Typing")
     await asyncio.sleep(DELAY)
     m=await message.reply_sticker(STAT_STICK)
     await asyncio.sleep(DELAY)
