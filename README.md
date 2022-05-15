@@ -13,6 +13,8 @@
 This is a pyrogram based telagram bot. Telagram user id, info, telagrph, stickerid, fun, etc....
 
 
+### 🥳 It has `UPSTREAM_REPO` support 🤩
+
 ### Deploy to Heroku
 
 ⚠️ Edit readme.md templates= link to your repo link and deploy  🙏 avoid source code violation 
