@@ -1,6 +1,6 @@
 from pyrogram import filters
 from helper.utils import not_subscribed
-from pyrogram import Client as MT_ID_Bot
+from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @Client.on_message(filters.private & filters.create(not_subscribed))
