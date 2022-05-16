@@ -53,7 +53,16 @@ IKKA_STRINGS = (
     "CAACAgUAAxkBAAIDgmIN8oZFf70SfKUOl9nnk0Q0uIGPAAJjAwAC3-lRVqPrbp8AAeUBch4E",
     "CAACAgUAAxkBAAIDj2IN86K_5xEpxc00sVRoFLgNgvh_AALeAgACh49oVh2VB0KUEX3zHgQ",
     "CAACAgUAAxkBAAIDkmIN87LWn-56jo9wHTdifHsdBCAiAAJPAwACK4yZVlCyU1tXbk2YHgQ",
-)   
+) 
+
+@Client.on_message(filters.private & filters.create(not_subscribed))
+async def is_not_subscribed(client, message):
+    await message.reply_text(
+       text="**⚠️Sorry bro,You didn't Joined Our Updates Channel Join now and start again🙏**",
+       reply_markup=InlineKeyboardMarkup([
+           [ InlineKeyboardButton(text="📢𝙹𝚘𝚒𝚗 𝙼𝚢 𝚄𝚙𝚍𝚊𝚝𝚎 𝙲𝚑𝚊𝚗𝚗𝚎𝚕📢", url=client.invitelink)]
+           ])
+       ) 
 
 @Client.on_message(filters.command("dice"))
 async def roll_dice(bot, message):
