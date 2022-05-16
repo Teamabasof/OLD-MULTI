@@ -49,8 +49,8 @@ async def id_message(bot, message):
 <u>👁️‍🗨️DETAILS</u>
 
 ♂️ID : <code>{message.from_user.id}</code>
-♀️FIRST NAME : {message.from_user.first_name}
-⚡️LAST NAME : {message.from_user.last_name}
+♀️FIRST NAME : <code>{message.from_user.first_name}<code>
+⚡️LAST NAME : <code>{message.from_user.last_name}<code>
 ⚜️USERNAME : @{message.from_user.username}
 🔅MENTION : {message.from_user.mention}
 📎YOUR LINK : https://t.me/{message.from_user.username}
