@@ -42,7 +42,7 @@ async def start_message(bot, message):
             )
         )
          
-@Client.on_message(filters.private & filters.command("id"))
+@Client.on_message(filters.command("id"))
 async def id_message(bot, message):
     await message.reply_text(
     text = f"""<i>
@@ -58,7 +58,7 @@ async def id_message(bot, message):
 THANK YOU FOR USING BETA❣️</i>""")
 
 
-@Client.on_message(filters.private & filters.command(["stickerid"]))
+@Client.on_message(filters.command(["stickerid"]))
 async def stickerid(bot, message):   
     if message.reply_to_message.sticker:
        await message.reply(f"**Sticker ID is**  \n `{message.reply_to_message.sticker.file_id}` \n \n ** Unique ID is ** \n\n`{message.reply_to_message.sticker.file_unique_id}`", quote=True)
