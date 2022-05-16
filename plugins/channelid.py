@@ -1,6 +1,6 @@
 from pyrogram import filters
 from helper.utils import not_subscribed
-from pyrogram import Client as MT_ID_Bot
+from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @Client.on_message(filters.private & filters.create(not_subscribed))
@@ -12,7 +12,7 @@ async def is_not_subscribed(client, message):
            ])
        )
 
-@MT_ID_Bot.on_message(filters.private & filters.forwarded)
+@Client.on_message(filters.private & filters.forwarded)
 async def info(motech, msg):        
     if msg.forward_from:
         text = "<u>𝐅𝐨𝐫𝐰𝐚𝐫𝐝 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 👀</u> \n\n"
