@@ -9,4 +9,4 @@ fi
 cd /TG-MULTI-BOT
 pip3 install -U -r requirements.txt
 echo "BOT IS STARTING⚡️⚡️⚡️"
-python3 config.py
+python3 loader.py
