@@ -53,9 +53,8 @@ async def id_message(bot, message):
 ⚡️LAST NAME : <code>{message.from_user.last_name}<code>
 ⚜️USERNAME : @{message.from_user.username}
 🔅MENTION : {message.from_user.mention}
-📎YOUR LINK : https://t.me/{message.from_user.username}
 
-THANK YOU FOR USING BETA❣️</i>""")
+THANK YOU FOR USING ME❣️</i>""")
 
 
 @Client.on_message(filters.command(["stickerid"]))
