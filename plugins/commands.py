@@ -46,15 +46,13 @@ async def start_message(bot, message):
 async def id_message(bot, message):
     await message.reply_text(
     text = f"""<i>
-<u>👁️‍🗨️DETAILS</u>
+<u>👁️‍🗨️YOUR DETAILS</u>
 
-♂️ID : <code>{message.from_user.id}</code>
-♀️FIRST NAME : <code>{message.from_user.first_name}<code>
-⚡️LAST NAME : <code>{message.from_user.last_name}<code>
-⚜️USERNAME : @{message.from_user.username}
-🔅MENTION : {message.from_user.mention}
+○ ID : <code>{message.from_user.id}</code>
+○ First Name : <code>{message.from_user.first_name}<code>
+○ UserName : @{message.from_user.username}
 
-THANK YOU FOR USING ME❣️</i>""")
+Thank You For Using Me❣️</i>""")
 
 
 @Client.on_message(filters.command(["stickerid"]))
