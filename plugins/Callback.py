@@ -39,7 +39,7 @@ async def callback(bot, msg):
 ╔════❰ 𝙼𝚄𝙻𝚃𝙸 𝙱𝙾𝚃 ❱═❍
 ║╭━━━━━━━━━━━━━━━➣
 ║┣⪼🤖ᴍʏ ɴᴀᴍᴇ : {bot.mention}
-║┣⪼👦ᴅᴇᴠ 1 : <a href=https://t.me/JP_Jeol>ᴊᴇᴏʟᴘᴀᴜʟ</a>
+║┣⪼👦ᴅᴇᴠ 1 : <a href=https://t.me/JP_Jeol_org>ᴊᴇᴏʟ</a>
 ║┣⪼👨‍💻ᴅᴇᴠ 2 : <a href=https://t.me/mr_MKN>ᴍʀ.ᴍᴋɴ ᴛɢ</a>
 ║┣⪼❣️sᴏᴜʀᴄᴇ ᴄᴏᴅ : <a href=https://github.com/Jeolpaul/TG-MULTI-BOT>ᴛɢ-ᴍᴜʟᴛɪ-ʙᴏᴛ</a>
 ║┣⪼📡ʜᴏsᴛᴇᴅ ᴏɴ : <a href=https://dashboard.heroku.com>ʜᴇʀᴏᴋᴜ</a>
@@ -74,7 +74,7 @@ async def callback(bot, msg):
          await msg.message.edit(
              text=f"This Bot will be made @JP_Jeol & @mr_MKN ",
              reply_markup=InlineKeyboardMarkup( [[
-                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 1", url="https://t.me/JP_Jeol"),
+                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 1", url="https://t.me/JP_Jeol_org"),
                   InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 2", url="https://t.me/mr_MKN")
                   ],[
                   InlineKeyboardButton("❣️ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐂𝐎𝐃𝐄 ❣️", url="https://github.com/Jeolpaul/TG-MULTI-BOT"),
@@ -108,7 +108,7 @@ async def callback(bot, msg):
          await msg.message.edit(
              text="🤖 This is My botz 😁",
                  reply_markup=InlineKeyboardMarkup( [[
-                     InlineKeyboardButton("ℹ️ 𝐈𝐍𝐅𝐎 𝐁𝐎𝐓", url="https://t.me/get_id_beta_bot"),
+                     InlineKeyboardButton("ℹ️ 𝐌𝐎𝐕𝐈𝐄 𝐁𝐎𝐓", url="https://t.me/GeorgeMalarobot"),
                      InlineKeyboardButton("🎵 𝐌𝐔𝐒𝐈𝐂 𝐁𝐎𝐓", url="https://t.me/Kochirajavu_musicbot")
                      ],[
                      InlineKeyboardButton("🎖️ 𝐆𝐑𝐎𝐔𝐏 𝐌𝐀𝐍𝐀𝐆𝐄𝐑 🎖️", url="https://t.me/BETA_GROUPMANAGBOT")
