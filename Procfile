@@ -1,1 +1,1 @@
-worker: bash 
+worker: bash multi.sh
