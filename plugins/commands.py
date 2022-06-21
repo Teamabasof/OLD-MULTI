@@ -41,6 +41,29 @@ async def start_message(bot, message):
             ]]
             )
         )
+
+@app.on_message(filters.private & filters.regex(pattern="👥 SUPPORT"))
+async def refferal(_, message: Message):
+    name = message.from_user.id
+    await app.send_sticker(name,random.choice(PICS)),reply_markup=keyboard)
+    try:
+       await message._client.get_chat_member(int(CHANNEL_ID), message.from_user.id)
+       link = await app.create_chat_invite_link(chat_id=(int(CHANNEL_ID) if CHANNEL_ID.startswith("-100") else CHANNEL_ID))
+   
+    except UserNotParticipant:
+       await app.send_message(
+			chat_id=message.from_user.id,
+			text=f"""
+⚠️ **Access Denied** {message.from_user.mention}
+❗️ You Must Join This Channel First !
+""",
+     reply_markup=InlineKeyboardMarkup(
+             [
+                 [
+                    InlineKeyboardButton("🚀 Join Now  ", url=f"https://t.me/Beta_Bot_Updates"),
+                 ],
+             ]
+            ))
          
 @Client.on_message(filters.command("id"))
 async def id_message(bot, message):
