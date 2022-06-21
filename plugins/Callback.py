@@ -109,9 +109,9 @@ async def callback(bot, msg):
              text="🤖 This is My botz 😁",
                  reply_markup=InlineKeyboardMarkup( [[
                      InlineKeyboardButton("ℹ️ 𝐌𝐎𝐕𝐈𝐄 𝐁𝐎𝐓", url="https://t.me/GeorgeMalarobot"),
-                     InlineKeyboardButton("🎵 𝐌𝐔𝐒𝐈𝐂 𝐁𝐎𝐓", url="https://t.me/Kochirajavu_musicbot")
+                     InlineKeyboardButton("🎵 𝐌𝐔𝐒𝐈𝐂 𝐁𝐎𝐓", url="https://t.me/SK_MUSIC_ROBOT")
                      ],[
-                     InlineKeyboardButton("🎖️ 𝐆𝐑𝐎𝐔𝐏 𝐌𝐀𝐍𝐀𝐆𝐄𝐑 🎖️", url="https://t.me/BETA_GROUPMANAGBOT")
+                     InlineKeyboardButton("🎖️ 𝐆𝐑𝐎𝐔𝐏 𝐌𝐀𝐍𝐀𝐆𝐄𝐑 🎖️", url="https://t.me/MKN_GROUPMANAGEROBOT")
                      ],[                   
                      InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
