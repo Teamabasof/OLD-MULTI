@@ -31,7 +31,7 @@ async def start_message(bot, message):
         caption=f"Hello {message.from_user.mention}👋🏻\nI'am A Multi use Bot with many usefull features.\neg:- Telegarph, Channel ID, User ID, Fun, Group Id etc...\nYou can see My commands by below button... \n\n◉ send channel last message with forwerd tag to get the channel id 💯",               
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("❣️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url="https://t.me/BETA_BOTSUPPORT"),
-            InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/BETA_UPDATES")
+            InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/Beta_Bot_Updates")
             ],[            
             InlineKeyboardButton("ℹ️ 𝐇𝐄𝐋𝐏", callback_data="help"),
             InlineKeyboardButton("😉 𝐅𝐔𝐍", callback_data="fun")
@@ -42,28 +42,7 @@ async def start_message(bot, message):
             )
         )
 
-@app.on_message(filters.private & filters.regex(pattern="👥 SUPPORT"))
-async def refferal(_, message: Message):
-    name = message.from_user.id
-    await app.send_sticker(name,random.choice(PICS)),reply_markup=keyboard)
-    try:
-       await message._client.get_chat_member(int(CHANNEL_ID), message.from_user.id)
-       link = await app.create_chat_invite_link(chat_id=(int(CHANNEL_ID) if CHANNEL_ID.startswith("-100") else CHANNEL_ID))
-   
-    except UserNotParticipant:
-       await app.send_message(
-			chat_id=message.from_user.id,
-			text=f"""
-⚠️ **Access Denied** {message.from_user.mention}
-❗️ You Must Join This Channel First !
-""",
-     reply_markup=InlineKeyboardMarkup(
-             [
-                 [
-                    InlineKeyboardButton("🚀 Join Now  ", url=f"https://t.me/Beta_Bot_Updates"),
-                 ],
-             ]
-            ))
+
          
 @Client.on_message(filters.command("id"))
 async def id_message(bot, message):
