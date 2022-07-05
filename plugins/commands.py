@@ -1,22 +1,10 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.errors import UserNotParticipant
 from helper.database import insert, getid
-from helper.utils import not_subscribed
 from variables import STAT_STICK, PICS, ADMIN, DELAY
 import asyncio
 import random
 
-WAIT_MSG = """"<b>Processing ...</b>"""
-
-@Client.on_message(filters.private & filters.create(not_subscribed))
-async def is_not_subscribed(client, message):
-    await message.reply_text(
-       text="**⚠️Sorry bro,You didn't Joined Our Updates Channel Join now and start again🙏**",
-       reply_markup=InlineKeyboardMarkup([
-           [ InlineKeyboardButton(text="📢𝙹𝚘𝚒𝚗 𝙼𝚢 𝚄𝚙𝚍𝚊𝚝𝚎 𝙲𝚑𝚊𝚗𝚗𝚎𝚕📢", url=client.invitelink)]
-           ])
-       )
 
 @Client.on_message(filters.private & filters.command("start"))
 async def start_message(bot, message):
@@ -53,6 +41,7 @@ async def id_message(bot, message):
 ○ ID : <code>{message.from_user.id}</code>
 ○ First Name : <code>{message.from_user.first_name}<code>
 ○ UserName : @{message.from_user.username}
+○ link : <code>https://t.me/{message.from_user.username}</code>
 
 Thank You For Using Me❣️</i>""")
 
@@ -80,8 +69,12 @@ async def broadcast(bot, message):
 
 
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["users"]))
-async def get_users(client: Client, message: Message):    
-    msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
+async def get_users(bot, message):    
+    msg = await bot.send_message(chat_id=message.chat.id, text="<b>Processing ...</b>")
     ids = getid()
     tot = len(ids)
     await msg.edit(f"Total uses = {tot}")
+
+
+
+
