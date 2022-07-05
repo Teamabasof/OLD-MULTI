@@ -6,6 +6,8 @@ from variables import FORCE_SUB
 
 
 async def ForceSub(bot: Client, cmd: Message):
+    if not FORCE_SUB:
+      return False
     try:
         user = await bot.get_chat_member(chat_id=(int(FORCE_SUB) if FORCE_SUB.startswith("-100") else FORCE_SUB), user_id=cmd.from_user.id)          
         invite_link = await bot.create_chat_invite_link(chat_id=(int(FORCE_SUB) if FORCE_SUB.startswith("-100") else FORCE_SUB))          
@@ -30,12 +32,6 @@ async def ForceSub(bot: Client, cmd: Message):
             parse_mode="markdown"
         )
         return 400
-    except Exception:
-        await bot.send_message(
-            chat_id=cmd.from_user.id,
-            text="Something Went Wrong. Contact my [Support Group](https://t.me/BETA_BOTSUPPORT)",
-            parse_mode="markdown",
-            disable_web_page_preview=True
-        )
+    except Exception:        
         return 400
     return 200
