@@ -7,7 +7,8 @@ from variables import FORCE_SUB
 
 async def ForceSub(bot: Client, cmd: Message):
     try:
-        user = await bot.get_chat_member(chat_id=(int(FORCE_SUB) if FORCE_SUB.startswith("-100") else FORCE_SUB), user_id=cmd.from_user.id)
+        user = await bot.get_chat_member(chat_id=(int(FORCE_SUB) if FORCE_SUB.startswith("-100") else FORCE_SUB), user_id=cmd.from_user.id)          
+        invite_link = await bot.create_chat_invite_link(chat_id=(int(FORCE_SUB) if FORCE_SUB.startswith("-100") else FORCE_SUB))          
         if user.status == "banned":
             await bot.send_message(
                 chat_id=cmd.from_user.id,
@@ -21,7 +22,7 @@ async def ForceSub(bot: Client, cmd: Message):
             chat_id=cmd.from_user.id,
             text="**Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton(text='📢 Join Updates Channel 📢', url=f'https://t.me/{FORCE_SUB}',)
+                InlineKeyboardButton(text='📢 Join Updates Channel 📢', url=invite_link.invite_link)
                 ],[
                 InlineKeyboardButton('🔄 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗 🔄', url=f'https://t.me/{bot.username}?start=start')                            
                 ]]
