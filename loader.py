@@ -26,7 +26,7 @@ class App(Client):
        self.mention = me.mention
        self.username = me.username        
        
-
+print("Bot Started...")
 bot = App()
 bot.run()
 
