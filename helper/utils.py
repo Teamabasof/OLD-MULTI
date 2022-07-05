@@ -15,5 +15,5 @@ async def not_subscribed(_, client, message):
                 parse_mode="markdown",
                 disable_web_page_preview=True
             )
-         return False 
+          return False 
    return True
