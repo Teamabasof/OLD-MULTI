@@ -51,7 +51,7 @@ class App(Client):
       logging.info("Bot Stopped")
 
 bot = App()
-bot.run()
+bot.run(self.start())
 
 print("[INFO]: STARTING AIOHTTP CLIENT")
 session = aiohttp.ClientSession()
