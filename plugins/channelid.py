@@ -5,7 +5,10 @@ from helper.utils import ForceSub
 
 
 @Client.on_message(filters.private & filters.forwarded)
-async def info(motech, msg):        
+async def info(motech, msg):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return       
     if msg.forward_from:
         text = "<u>𝐅𝐨𝐫𝐰𝐚𝐫𝐝 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 👀</u> \n\n"
         if msg.forward_from["is_bot"]:
