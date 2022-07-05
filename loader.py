@@ -6,6 +6,8 @@ import aiohttp
 from dotenv import load_dotenv
 import re
 from os import environ, getenv
+
+load_dotenv()
                             
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
@@ -56,7 +58,7 @@ class App(Client):
       logging.info("Bot Stopped")
         
 bot = App()
-bot.run()
+bot.start()
 session = aiohttp.ClientSession()
     
 
