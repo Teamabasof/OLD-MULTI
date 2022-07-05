@@ -56,11 +56,13 @@ class App(Client):
     async def stop(self, *args):
       await super().stop()
       logging.info("Bot Stopped")
+
+
+session = aiohttp.ClientSession()
         
 bot = App()
 bot.start()
-session = aiohttp.ClientSession()
-    
+
 
 
 
