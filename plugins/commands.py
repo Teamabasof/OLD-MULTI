@@ -37,6 +37,9 @@ async def start_message(bot, message):
          
 @Client.on_message(filters.command("id"))
 async def id_message(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return
     await message.reply_text(
     text = f"""<i>
 <u>👁️‍🗨️YOUR DETAILS</u>
@@ -50,7 +53,10 @@ Thank You For Using Me❣️</i>""")
 
 
 @Client.on_message(filters.command(["stickerid"]))
-async def stickerid(bot, message):   
+async def stickerid(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return  
     if message.reply_to_message.sticker:
        await message.reply(f"**Sticker ID is**  \n `{message.reply_to_message.sticker.file_id}` \n \n ** Unique ID is ** \n\n`{message.reply_to_message.sticker.file_unique_id}`", quote=True)
     else: 
@@ -59,16 +65,16 @@ async def stickerid(bot, message):
 
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
 async def broadcast(bot, message):
- if (message.reply_to_message):
-   ms = await message.reply_text("Geting All ids from database ...........")
-   ids = getid()
-   tot = len(ids)
-   await ms.edit(f"Starting Broadcast .... \n Sending Message To {tot} Users")
-   for id in ids:
-     try:
-     	await message.reply_to_message.copy(id)
-     except:
-     	pass
+    if (message.reply_to_message):
+      ms = await message.reply_text("Geting All ids from database ...........")
+      ids = getid()
+      tot = len(ids)
+      await ms.edit(f"Starting Broadcast .... \n Sending Message To {tot} Users")
+      for id in ids:
+        try:
+     	   await message.reply_to_message.copy(id)
+        except:
+     	   pass
 
 
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["users"]))
@@ -82,6 +88,9 @@ async def get_users(bot, message):
 @Client.on_message(filters.command("logo") & filters.incoming & filters.text & ~filters.forwarded & (
   filters.group | filters.private))
 async def logo(bot, message):
+  forcesub = await ForceSub(bot, message)
+  if forcesub == 400:
+      return
   try:
     text = message.text.replace("logo","").replace("/","").replace("@TechZLogoMakerBot","").strip().upper()
     
@@ -115,6 +124,9 @@ async def logo(bot, message):
 @Client.on_message(filters.command("logosq") & filters.incoming & filters.text & ~filters.forwarded & (
   filters.group | filters.private))
 async def logo(bot, message):
+  forcesub = await ForceSub(bot, message)
+  if forcesub == 400:
+      return
   try:
     text = message.text.replace("logosq","").replace("/","").replace("[ᗷETᗩ]","").strip().upper()
       
