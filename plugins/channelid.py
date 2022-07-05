@@ -1,6 +1,8 @@
 from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from helper.utils import ForceSub
+
 
 @Client.on_message(filters.private & filters.forwarded)
 async def info(motech, msg):        
