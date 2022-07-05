@@ -12,6 +12,9 @@ import random
 
 @Client.on_message(filters.private & filters.command("start"))
 async def start_message(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return
     insert(int(message.chat.id))
     await message.reply_chat_action("Typing")    
     m=await message.reply_sticker(STAT_STICK)
