@@ -16,6 +16,5 @@ async def not_subscribed(_, client, message):
    except UserNotParticipant:
       pass
    else:
-      if user.status != "kicked":
          return False 
    return True
