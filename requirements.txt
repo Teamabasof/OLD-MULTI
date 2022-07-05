@@ -4,3 +4,5 @@ asyncio
 pymongo
 dnspython
 telegraph
+aiohttp
+python-dotenv
