@@ -15,9 +15,6 @@ API_ID = int(os.environ.get("API_ID", ""))
 
 API_HASH = os.environ.get("API_HASH", "")
 
-FORCE_SUB = os.environ.get("FORCE_SUB", None)           
-
-
 class App(Client):
 
     def __init__(self):
@@ -33,16 +30,7 @@ class App(Client):
        await super().start()
        me = await self.get_me() 
        self.mention = me.mention
-       self.username = me.username 
-       self.force_channel = FORCE_SUB
-       if FORCE_SUB:
-         try:
-            link = await self.export_chat_invite_link(FORCE_SUB)
-            self.invitelink = link
-         except Exception as e:
-            logging.warning(e) 
-            logging.warning("Make Sure Bot admin in force sub channel") 
-            self.force_channel = None
+       self.username = me.username        
        logging.info(f"{me.first_name} Started")
         
     async def stop(self, *args):
