@@ -2,9 +2,13 @@ import os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from telegraph import upload_file
+from helper.utils import ForceSub
 
 @Client.on_message(filters.private & filters.command(["tgmedia", "tgraph", "telegraph"]))
 async def telegraph(client, message):
+    forcesub = await ForceSub(client, message)
+    if forcesub == 400:
+        return
     replied = message.reply_to_message
     if not replied:
         await message.reply("Reply to a supported media file")
