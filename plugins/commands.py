@@ -1,5 +1,6 @@
 from pyrogram import Client, filters, idle
-import pyrogram 
+import pyrogram
+from helper.utils import ForceSub
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from helper.database import insert, getid
