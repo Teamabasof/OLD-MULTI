@@ -23,6 +23,13 @@ async def callback(bot, msg):
 
 ◉ /stickerid - Reply To Any Sticker to get sticker id
 
+To Make Logo - /logo Your Name
+To Make Square Logo -  /logosq Your Name
+
+♻️ Example:
+/logo BETAs
+/logosq MKN
+
 🤩THANKS FOR USING ME😍
 """,       
            reply_markup=InlineKeyboardMarkup( [[
