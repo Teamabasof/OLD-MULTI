@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
+from helper.utils import ForceSub
 from plugins.helper_functions.cust_p_filters import f_onw_fliter
 import random
 
