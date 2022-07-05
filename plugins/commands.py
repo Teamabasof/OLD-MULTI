@@ -1,7 +1,7 @@
 from pyrogram import Client, filters, idle
 import pyrogram
 from pyrogram.errors import FloodWait
-from helper.f_sub import ForceSub
+from helper.ban import BanChek
 from helper.utils import not_subscribed
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from helper.database import insert, getid
@@ -24,8 +24,8 @@ async def is_not_subscribed(client, message):
 
 @Client.on_message(filters.private & filters.command("start"))
 async def start_message(bot, message):
-    forcesub = await ForceSub(bot, message)
-    if forcesub == 400:
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
         return
     insert(int(message.chat.id))
     await message.reply_chat_action("Typing")    
@@ -52,6 +52,9 @@ async def start_message(bot, message):
          
 @Client.on_message(filters.command("id"))
 async def id_message(bot, message):
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return
     await message.reply_text(
     text = f"""<i>
 <u>👁️‍🗨️YOUR DETAILS</u>
@@ -65,7 +68,10 @@ Thank You For Using Me❣️</i>""")
 
 
 @Client.on_message(filters.command(["stickerid"]))
-async def stickerid(bot, message):    
+async def stickerid(bot, message): 
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return 
     if message.reply_to_message.sticker:
        await message.reply(f"**Sticker ID is**  \n `{message.reply_to_message.sticker.file_id}` \n \n ** Unique ID is ** \n\n`{message.reply_to_message.sticker.file_unique_id}`", quote=True)
     else: 
@@ -96,6 +102,9 @@ async def get_users(bot, message):
 
 @Client.on_message(filters.command("logosq") & filters.incoming & filters.text & ~filters.forwarded & filters.private)
 async def logosq(bot, message):
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return
     try:
       text = message.text.replace("logosq","").replace("/","").replace("[ᗷETᗩ]","").strip().upper()
       
@@ -128,6 +137,9 @@ async def logosq(bot, message):
 
 @Client.on_message(filters.command("logo") & filters.incoming & filters.text & ~filters.forwarded & filters.private)
 async def logo(bot, message):
+  kikked = await BanChek(bot, message)
+  if kikked == 400:
+      return
   try:
     text = message.text.replace("logo","").replace("/","").replace("@TechZLogoMakerBot","").strip().upper()
     
