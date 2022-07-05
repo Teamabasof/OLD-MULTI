@@ -13,23 +13,12 @@ async def ForceSub(bot: Client, cmd: Message):
         if user.status == "banned":
             await bot.send_message(
                 chat_id=cmd.from_user.id,
-                text="Access Denied ⚠. Contact my [Support Group](https://t.me/BETA_BOTSUPPORT).",
+                text="⚠️**𝚂𝙾𝚁𝚁𝚈 𝙳𝚄𝙳𝙴 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙱𝙰𝙽𝙽𝙴𝙳 \n𝙰𝙲𝙲𝙴𝚂𝚂 𝙳𝙴𝙽𝙸𝙴𝙳 ⚠️ 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 [𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿](https://t.me/BETA_BOTSUPPORT)**",
                 parse_mode="markdown",
                 disable_web_page_preview=True
             )
             return 400
-    except UserNotParticipant:        
-        await bot.send_message(                               
-            chat_id=cmd.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
-            reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton(text='📢 Join Updates Channel 📢', url=bot.invite_link)
-                ],[
-                InlineKeyboardButton('🔄 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗 🔄', url=f'https://t.me/{bot.username}?start=start')                            
-                ]]
-            ),
-            parse_mode="markdown"
-        )
+    except UserNotParticipant:                
         return 400
     except Exception:        
         return 400
