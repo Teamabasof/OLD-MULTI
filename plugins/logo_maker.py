@@ -1,4 +1,3 @@
-from loader import session
 from typing import Optional
 import aiohttp
 from config import LOGO_API_URL1, LOGO_API_URL2
