@@ -13,3 +13,5 @@ ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.
 DB_URL = os.environ.get("DB_URL", "")
 
 DELAY = int(os.environ.get("DELAY", "1"))
+
+FORCE_SUB = os.environ.get("FORCE_SUB", None)           
