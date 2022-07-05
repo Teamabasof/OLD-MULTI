@@ -2,6 +2,7 @@ import os
 import logging 
 import logging.config
 from pyrogram import Client
+import aiohttp
                             
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
@@ -48,7 +49,7 @@ class App(Client):
         
 bot = App()
 bot.run()
-
+session = aiohttp.ClientSession()
     
 
 
