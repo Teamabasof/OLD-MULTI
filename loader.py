@@ -61,7 +61,7 @@ class App(Client):
 session = aiohttp.ClientSession()
         
 bot = App()
-bot.start()
+bot.run()
 
 
 
