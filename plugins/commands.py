@@ -91,7 +91,7 @@ async def get_users(bot, message):
 
 
 @Client.on_message(filters.command("logosq") & filters.incoming & filters.text & ~filters.forwarded & filters.private)
-async def logo(bot, message):
+async def logosq(bot, message):
     try:
       text = message.text.replace("logosq","").replace("/","").replace("[ᗷETᗩ]","").strip().upper()
       
@@ -123,6 +123,7 @@ async def logo(bot, message):
       return await message.reply_text("`❌ Something Went Wrong...`\n\nReport This Error In [ᗷETᗩ]")
 
 @Client.on_message(filters.command("logo") & filters.incoming & filters.text & ~filters.forwarded & filters.private)
+async def logo(bot, message):
   try:
     text = message.text.replace("logo","").replace("/","").replace("@TechZLogoMakerBot","").strip().upper()
     
