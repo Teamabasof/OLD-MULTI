@@ -6,7 +6,7 @@ from helper.utils import ForceSub
 
 @Client.on_message(filters.private & filters.forwarded)
 async def info(motech, msg):
-    forcesub = await ForceSub(bot, message)
+    forcesub = await ForceSub(motech, msg)
     if forcesub == 400:
         return       
     if msg.forward_from:
