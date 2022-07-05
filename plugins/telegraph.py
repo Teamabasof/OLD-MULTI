@@ -4,7 +4,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, 
 from telegraph import upload_file
 from helper.utils import not_subscribed
 
-@Client.on_message(filters.private & filters.create(not_subscribed))
+#@Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
     await message.reply_text(
        text="**⚠️Sorry bro,You didn't Joined Our Updates Channel Join now and start again🙏**",
