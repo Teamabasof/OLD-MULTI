@@ -22,6 +22,7 @@ async def ForceSub(bot: Client, cmd: Message):
             text="**Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
             reply_markup=InlineKeyboardMarkup( [[
                 InlineKeyboardButton(text="📢 Join Updates Channel 📢", url=f"https://t.me/{FORCE_SUB}")
+                ],[
                 InlineKeyboardButton("🔄 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗 🔄", url=f"https://t.me/{bot.username}?start=start")                            
                 ]]
             ),
