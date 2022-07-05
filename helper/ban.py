@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from variables import FORCE_SUB
 
 
-async def ForceSub(bot: Client, cmd: Message):
+async def BanChek(bot: Client, cmd: Message):
     if not FORCE_SUB:
       return False
     try:
