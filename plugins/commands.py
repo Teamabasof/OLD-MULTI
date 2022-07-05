@@ -12,8 +12,7 @@ import random
 @Client.on_message(filters.private & filters.command("start"))
 async def start_message(bot, message):
     insert(int(message.chat.id))
-    await message.reply_chat_action("Typing")
-    await asyncio.sleep(DELAY)
+    await message.reply_chat_action("Typing")    
     m=await message.reply_sticker(STAT_STICK)
     await asyncio.sleep(DELAY)
     await m.delete()             
