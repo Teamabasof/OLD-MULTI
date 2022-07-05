@@ -2,6 +2,7 @@ from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from helper.utils import not_subscribed
+from helper.ban import BanChek
 
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
@@ -17,6 +18,9 @@ async def is_not_subscribed(client, message):
 
 @Client.on_message(filters.private & filters.forwarded)
 async def info(motech, msg):
+    kikked = await BanChek(motech, msg)
+    if kikked == 400:
+        return 
     if msg.forward_from:
         text = "<u>𝐅𝐨𝐫𝐰𝐚𝐫𝐝 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 👀</u> \n\n"
         if msg.forward_from["is_bot"]:
