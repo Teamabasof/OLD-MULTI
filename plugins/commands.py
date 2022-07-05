@@ -1,6 +1,7 @@
 from pyrogram import Client, filters, idle
 import pyrogram
 from pyrogram.errors import FloodWait
+from helper.f_sub import ForceSub
 from helper.utils import not_subscribed
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from helper.database import insert, getid
@@ -9,7 +10,7 @@ from plugins.logo_maker import generate_logo
 import asyncio
 import random
 
-@Client.on_message(filters.private & filters.create(not_subscribed))
+#@Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
     await message.reply_text(
        text="**⚠️Sorry bro,You didn't Joined Our Updates Channel Join now and start again🙏**",
@@ -23,6 +24,9 @@ async def is_not_subscribed(client, message):
 
 @Client.on_message(filters.private & filters.command("start"))
 async def start_message(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return
     insert(int(message.chat.id))
     await message.reply_chat_action("Typing")    
     m=await message.reply_sticker(STAT_STICK)
