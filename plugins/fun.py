@@ -2,6 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from plugins.helper_functions.cust_p_filters import f_onw_fliter
 from helper.utils import not_subscribed
+from helper.ban import BanChek
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 import random
 
@@ -71,32 +72,44 @@ async def is_not_subscribed(client, message):
 
 @Client.on_message(filters.command("dice"))
 async def roll_dice(bot, message):
-    
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return 
     await bot.send_dice(message.chat.id, "🎲")
 
 @Client.on_message(filters.command("arrow"))                                      
 async def roll_arrow(bot, message):
-    
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return 
     await bot.send_dice(message.chat.id, "🎯")
 
 @Client.on_message(filters.command("goal"))
 async def roll_goal(bot, message):
-    
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return 
     await bot.send_dice(message.chat.id, "⚽️")
 
 @Client.on_message(filters.command("luck"))
 async def roll_luck(bot, message):
-    
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return 
     await bot.send_dice(message.chat.id, "🎰")
 
 @Client.on_message(filters.command("throw"))
 async def roll_throw(bot, message):
-    
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return 
     await bot.send_dice(message.chat.id, "🏀")
 
 @Client.on_message(filters.command(["bowling", "tenpins"]))
 async def roll_bowling(bot, message):
-    
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return 
     await bot.send_dice(message.chat.id, "🎳")
 
 
@@ -104,7 +117,9 @@ async def roll_bowling(bot, message):
     f_onw_fliter
 )
 async def runs(bot, message):
-    
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return 
     """ /runs strings """
     effective_string = random.choice(RUN_STRINGS)
     if message.reply_to_message:
@@ -116,7 +131,9 @@ async def runs(bot, message):
     f_onw_fliter
 )
 async def ikka(bot, message):
-    
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return 
     """ /ikka strings """
     effective_string = random.choice(IKKA_STRINGS)
     if message.reply_to_message:
