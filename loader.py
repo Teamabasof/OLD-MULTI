@@ -1,5 +1,6 @@
 import os
-import logging 
+import logging
+import logging.config
 from pyrogram import Client
 import re
 from variables import FORCE_SUB
@@ -9,6 +10,9 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 API_ID = int(os.environ.get("API_ID", ""))
 
 API_HASH = os.environ.get("API_HASH", "")
+
+logging.config.fileConfig('logging.conf')
+logging.getLogger().setLevel(logging.INFO)
 
 class App(Client):
 
@@ -37,8 +41,8 @@ class App(Client):
             self.force_channel = None
 
 
-print("Bot Started...")
 bot = App()
+print("Bot Started...")
 bot.run()
 
 
