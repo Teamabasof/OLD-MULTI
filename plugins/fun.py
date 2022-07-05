@@ -58,26 +58,44 @@ IKKA_STRINGS = (
 
 @Client.on_message(filters.command("dice"))
 async def roll_dice(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return
     await bot.send_dice(message.chat.id, "🎲")
 
 @Client.on_message(filters.command("arrow"))                                      
 async def roll_arrow(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return
     await bot.send_dice(message.chat.id, "🎯")
 
 @Client.on_message(filters.command("goal"))
 async def roll_goal(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return
     await bot.send_dice(message.chat.id, "⚽️")
 
 @Client.on_message(filters.command("luck"))
 async def roll_luck(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return
     await bot.send_dice(message.chat.id, "🎰")
 
 @Client.on_message(filters.command("throw"))
 async def roll_throw(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return
     await bot.send_dice(message.chat.id, "🏀")
 
 @Client.on_message(filters.command(["bowling", "tenpins"]))
 async def roll_bowling(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return
     await bot.send_dice(message.chat.id, "🎳")
 
 
@@ -85,6 +103,9 @@ async def roll_bowling(bot, message):
     f_onw_fliter
 )
 async def runs(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return
     """ /runs strings """
     effective_string = random.choice(RUN_STRINGS)
     if message.reply_to_message:
@@ -96,6 +117,9 @@ async def runs(bot, message):
     f_onw_fliter
 )
 async def ikka(bot, message):
+    forcesub = await ForceSub(bot, message)
+    if forcesub == 400:
+        return
     """ /ikka strings """
     effective_string = random.choice(IKKA_STRINGS)
     if message.reply_to_message:
