@@ -3,6 +3,9 @@ import logging
 import logging.config
 from pyrogram import Client
 import aiohttp
+from dotenv import load_dotenv
+import re
+from os import environ, getenv
                             
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
@@ -15,6 +18,11 @@ API_ID = int(os.environ.get("API_ID", ""))
 API_HASH = os.environ.get("API_HASH", "")
 
 FORCE_SUB = os.environ.get("FORCE_SUB", None)           
+
+LOGO_API_URL1 = "https://techzbotsapi.herokuapp.com/wall?query="
+
+LOGO_API_URL2 = "https://techzbotsapi.herokuapp.com/unsplash?query="
+
 
 class App(Client):
 
