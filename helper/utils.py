@@ -9,8 +9,7 @@ async def ForceSub(bot: Client, cmd: Message):
     if not FORCE_SUB:
       return False
     try:
-        user = await bot.get_chat_member(chat_id=(int(FORCE_SUB) if FORCE_SUB.startswith("-100") else FORCE_SUB), user_id=cmd.from_user.id)          
-        invite_link = await bot.create_chat_invite_link(chat_id=(int(FORCE_SUB) if FORCE_SUB.startswith("-100") else FORCE_SUB))          
+        user = await bot.get_chat_member(chat_id=(int(FORCE_SUB) if FORCE_SUB.startswith("-100") else FORCE_SUB), user_id=cmd.from_user.id)                 
         if user.status == "banned":
             await bot.send_message(
                 chat_id=cmd.from_user.id,
@@ -20,7 +19,8 @@ async def ForceSub(bot: Client, cmd: Message):
             )
             return 400
     except UserNotParticipant:
-        await bot.send_message(            
+        await bot.send_message(
+            invite_link = await bot.create_chat_invite_link(chat_id=(int(FORCE_SUB) if FORCE_SUB.startswith("-100") else FORCE_SUB))                   
             chat_id=cmd.from_user.id,
             text="**Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
             reply_markup=InlineKeyboardMarkup( [[
