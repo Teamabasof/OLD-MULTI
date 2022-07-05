@@ -18,7 +18,7 @@ async def ForceSub(bot: Client, cmd: Message):
             return 400
     except UserNotParticipant:
         await bot.send_message(
-            invite=https://t.me/(FORCE_SUB),
+            invite=f'https://t.me/{FORCE_SUB}',
             #chat_id=cmd.from_user.id,
             text="**Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
             reply_markup=InlineKeyboardMarkup( [[
