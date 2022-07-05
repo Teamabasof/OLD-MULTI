@@ -4,7 +4,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from helper.database import insert, getid
 from variables import STAT_STICK, PICS, ADMIN, DELAY
-from plugins.logo_maker import generate_logo
+from helper.logo_maker import generate_logo
 import asyncio
 import random
 
