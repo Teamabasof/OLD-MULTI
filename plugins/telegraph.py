@@ -3,6 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from telegraph import upload_file
 from helper.utils import not_subscribed
+from helper.ban import BanChek
 
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
@@ -18,6 +19,9 @@ async def is_not_subscribed(client, message):
 
 @Client.on_message(filters.private & filters.command(["tgmedia", "tgraph", "telegraph"]))
 async def telegraph(client, message):
+    kikked = await BanChek(client, message)
+    if kikked == 400:
+        return 
     replied = message.reply_to_message
     if not replied:
         await message.reply("Reply to a supported media file")
