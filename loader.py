@@ -52,7 +52,6 @@ class App(Client):
 
 bot = App()
 bot.run()
-bot.start()
 
 print("[INFO]: STARTING AIOHTTP CLIENT")
 session = aiohttp.ClientSession()
