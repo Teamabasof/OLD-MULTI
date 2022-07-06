@@ -1,7 +1,7 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from plugins.helper_functions.font_script import Fonts
+from .fonts import Fonts
 from plugins.helper_functions.cust_p_filters import f_onw_fliter
 from helper.utils import not_subscribed
 from helper.ban import BanChek
