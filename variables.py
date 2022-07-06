@@ -15,3 +15,5 @@ DB_URL = os.environ.get("DB_URL", "")
 DELAY = int(os.environ.get("DELAY", "1"))
 
 FORCE_SUB = os.environ.get("FORCE_SUB", None)           
+
+HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")
