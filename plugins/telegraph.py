@@ -44,9 +44,17 @@ async def telegraph(client, message):
     ):
         await message.reply("Not supported!")
         return
+    text = await message.reply_text(
+        text="<code>Downloading to My Server ...</code>",
+        disable_web_page_preview=True
+    )
     download_location = await client.download_media(
         message=message.reply_to_message,
         file_name="root/downloads/",
+    )
+    await text.edit_text(
+        text="<code>Downloading Completed. Now I am Uploading to telegra.ph Link ...</code>",
+        disable_web_page_preview=True
     )
     try:
         response = upload_file(download_location)
