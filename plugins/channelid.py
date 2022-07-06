@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from helper.utils import not_subscribed
+#from helper.utils import not_subscribed
 from helper.ban import BanChek
 
-@Client.on_message(filters.private & filters.create(not_subscribed))
+#@Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
     await message.reply_text(
        text="**⚠️Sorry bro,You didn't Joined Our Updates Channel Join now and start again🙏**",
