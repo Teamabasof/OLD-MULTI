@@ -44,7 +44,7 @@ async def telegraph(client, message):
     ):
         await message.reply("Not supported!")
         return
-    text = await message.reply_text(
+    mkn = await message.reply_text(
         text="<code>Downloading to My Server ...</code>",
         disable_web_page_preview=True
     )
@@ -52,16 +52,16 @@ async def telegraph(client, message):
         message=message.reply_to_message,
         file_name="root/downloads/",
     )
-    await text.edit_text(
+    await mkn.edit_text(
         text="<code>Downloading Completed. Now I am Uploading to telegra.ph Link ...</code>",
         disable_web_page_preview=True
     )
     try:
         response = upload_file(download_location)
     except Exception as document:
-        await message.reply(message, text=document)
+        await mkn.edit_text(message, text=document)
     else:
-        await text.edit_text(
+        await mkn.edit_text(
             text=f"<b>Link:-</b>\n\n <code>https://telegra.ph{response[0]}</code>",
             quote=True,
             reply_markup=InlineKeyboardMarkup(
