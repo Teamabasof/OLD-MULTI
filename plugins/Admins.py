@@ -10,7 +10,7 @@ from pyrogram import Client, filters
 CMD = ['.', '/', '#', '@']
 BOT_START_TIME = time.time()
 
-@Client.on_message(filters.command('dyno', CMD) & filters.user(["ADMIN"]))
+@Client.on_message(filters.command('dyno', CMD) & filters.user("ADMIN"))
 async def bot_status(client,message):
     if HEROKU_API_KEY:
         try:
