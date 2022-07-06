@@ -42,7 +42,7 @@ class App(Client):
           #  self.force_channel = None
 
 
-print('bot is started....)
+print('bot is started....')
 App.run()
 
 
