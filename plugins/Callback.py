@@ -1,4 +1,4 @@
-from pyrogram import Client, filters
+from pyrogram import Client, filters, __version__
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton                              
 from pyrogram.types import CallbackQuery
 import asyncio
@@ -52,7 +52,7 @@ To Make Square Logo -  /logosq Your Name
 ║┣⪼📡ʜᴏsᴛᴇᴅ ᴏɴ : <a href=https://dashboard.heroku.com>ʜᴇʀᴏᴋᴜ</a>
 ║┣⪼🗣️ʟᴀɴɢᴜᴀɢᴇ : <a href=https://www.python.org>ᴘʏᴛʜᴏɴ3</a>
 ║┣⪼📚ʟɪʙʀᴀʀʏ : <a href=https://github.com/pyrogram>ᴘʏʀᴏɢʀᴀᴍ</a> 
-║┣⪼🗒️ᴠᴇʀsɪᴏɴ : 1.0.3  
+║┣⪼🗒️ᴠᴇʀsɪᴏɴ : Pyrogram v{__version__}  
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍ """,
               disable_web_page_preview = True,
