@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from .fonts import Fonts
 from plugins.helper_functions.cust_p_filters import f_onw_fliter
-from helper.utils import not_subscribed
+#from helper.utils import not_subscribed
 from helper.ban import BanChek
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 import random
@@ -60,7 +60,7 @@ IKKA_STRINGS = (
 ) 
 
 
-@Client.on_message(filters.private & filters.create(not_subscribed))
+#@Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
     await message.reply_text(
        text="**⚠️Sorry bro,You didn't Joined Our Updates Channel Join now and start again🙏**",
