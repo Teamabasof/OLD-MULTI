@@ -1,4 +1,4 @@
-Pyrogram==1.3.0
+git+https://github.com/MrMKN/pyrogram@inline-m                      
 TgCrypto
 asyncio
 pymongo
