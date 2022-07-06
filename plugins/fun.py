@@ -5,7 +5,7 @@ from plugins.helper_functions.font_script import Fonts
 from plugins.helper_functions.cust_p_filters import f_onw_fliter
 from helper.utils import not_subscribed
 from helper.ban import BanChek
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery 
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 import random
 
 
