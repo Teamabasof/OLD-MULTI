@@ -12,7 +12,7 @@ API_ID = int(os.environ.get("API_ID", ""))
 
 API_HASH = os.environ.get("API_HASH", "")
 
-logging.config.fileConfig('logging.conf')
+logging.config.fileConfig("logging.conf")
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 
@@ -43,8 +43,7 @@ class App(Client):
             logging.warning(e) 
             logging.warning("Make Sure Bot admin in force sub channel") 
             self.force_channel = None
-       logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
-       logging.info(LOG_STR)
+       logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")          
 
     async def stop(self, *args):
        await super().stop()
