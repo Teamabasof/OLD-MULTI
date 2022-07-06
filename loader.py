@@ -43,7 +43,8 @@ class App(Client):
 
 
 print('bot is started....')
-App.run()
+bot = App()
+bot.run()
 
 
         
