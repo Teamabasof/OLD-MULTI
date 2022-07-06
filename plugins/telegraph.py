@@ -1,4 +1,5 @@
 import os
+import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from telegraph import upload_file
@@ -44,24 +45,22 @@ async def telegraph(client, message):
     ):
         await message.reply("Not supported!")
         return
-    mkn = await message.reply_text(
-        text="<code>Downloading to My Server ...</code>",
+    mkn=await message.reply_text(
+        text="<code>Trying to processing please weit.....</code>",
         disable_web_page_preview=True
     )
+    await asyncio.sleep(2)
+    await mkn.delete()
     download_location = await client.download_media(
         message=message.reply_to_message,
         file_name="root/downloads/",
     )
-    txt = await mkn.edit_text(
-        text="<code>Downloading Completed. Now I am Uploading to telegra.ph Link ...</code>",
-        disable_web_page_preview=True
-    )
     try:
         response = upload_file(download_location)
     except Exception as document:
-        await mkn.edit_text(message, text=document)
+        await message.reply(message, text=document)
     else:
-        await txt.edit_text(
+        await message.reply(
             text=f"<b>Link:-</b>\n\n <code>https://telegra.ph{response[0]}</code>",
             quote=True,
             reply_markup=InlineKeyboardMarkup(
