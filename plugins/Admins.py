@@ -4,14 +4,12 @@ import time
 import heroku3
 import requests
 from variables import ADMIN, HEROKU_API_KEY
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 
 CMD = ['.', '/']
 BOT_START_TIME = time.time()
 
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command("dyno", CMD))         
-#@Client.on_message(filters.command('dyno', CMD) & filters.user("ADMIN"))
 async def bot_status(client,message):
     if HEROKU_API_KEY:
         try:
