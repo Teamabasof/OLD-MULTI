@@ -11,8 +11,8 @@ API_ID = int(os.environ.get("API_ID", ""))
 
 API_HASH = os.environ.get("API_HASH", "")
 
-logging.config.fileConfig('logging.conf')
-logging.getLogger().setLevel(logging.INFO)
+#logging.config.fileConfig('logging.conf')
+#logging.getLogger().setLevel(logging.INFO)
 #logging.getLogger("pyrogram").setLevel(logging.ERROR)
 
 class App(Client):
