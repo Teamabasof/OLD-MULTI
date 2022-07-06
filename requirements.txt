@@ -6,3 +6,5 @@ dnspython
 telegraph
 aiohttp
 python-dotenv
+requests
+Heroku3
