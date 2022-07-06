@@ -44,17 +44,17 @@ async def telegraph(client, message):
         )
     ):
         await message.reply("Not supported!")
-        return
-    mkn=await message.reply_text(
-        text="<code>Trying to processing please weit.....</code>",
-        disable_web_page_preview=True
-    )
-    await asyncio.sleep(4)
-    await mkn.delete()
+        return    
     download_location = await client.download_media(
         message=message.reply_to_message,
         file_name="root/downloads/",
     )
+    mkn=await message.reply_text(
+        text="<code>Trying to processing please weit.....</code>",
+        disable_web_page_preview=True
+    )
+    await asyncio.sleep(2)
+    await mkn.delete()
     try:
         response = upload_file(download_location)
     except Exception as document:
