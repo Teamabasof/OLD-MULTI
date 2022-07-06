@@ -49,7 +49,7 @@ async def telegraph(client, message):
         text="<code>Trying to processing please weit.....</code>",
         disable_web_page_preview=True
     )
-    await asyncio.sleep(2)
+    await asyncio.sleep(4)
     await mkn.delete()
     download_location = await client.download_media(
         message=message.reply_to_message,
