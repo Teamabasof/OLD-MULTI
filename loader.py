@@ -42,8 +42,8 @@ class App(Client):
           #  self.force_channel = None
 
 
-bot = App()
-bot.run()
+print('bot is started....)
+App.run()
 
 
         
