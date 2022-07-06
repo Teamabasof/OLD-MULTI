@@ -1,6 +1,6 @@
 import os
 import logging
-#import logging.config
+import logging.config
 from pyrogram import Client
 import re
 from variables import FORCE_SUB
