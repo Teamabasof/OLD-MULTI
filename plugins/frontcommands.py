@@ -1,7 +1,7 @@
 import os
 from .fonts import Fonts
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery 
 
 
 @Client.on_message(filters.private & filters.incoming & filters.text)
