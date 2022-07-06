@@ -1,64 +1,51 @@
 import os
-from plugins.fonts import Fonts
+from config import Config
+from .fonts import Fonts
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@Client.on_message(filters.private & filters.command(["font"]))
+@Client.on_message(filters.private & filters.incoming & filters.text)
 async def style_buttons(c, m, cb=False):
     buttons = [[
         InlineKeyboardButton('𝚃𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛', callback_data='style+typewriter'),
         InlineKeyboardButton('𝕆𝕦𝕥𝕝𝕚𝕟𝕖', callback_data='style+outline'),
         InlineKeyboardButton('𝐒𝐞𝐫𝐢𝐟', callback_data='style+serif'),
-
         ],[
-
         InlineKeyboardButton('𝑺𝒆𝒓𝒊𝒇', callback_data='style+bold_cool'),
         InlineKeyboardButton('𝑆𝑒𝑟𝑖𝑓', callback_data='style+cool'),
         InlineKeyboardButton('Sᴍᴀʟʟ Cᴀᴘs', callback_data='style+small_cap'),
-
         ],[
-
         InlineKeyboardButton('𝓈𝒸𝓇𝒾𝓅𝓉', callback_data='style+script'),
         InlineKeyboardButton('𝓼𝓬𝓻𝓲𝓹𝓽', callback_data='style+script_bolt'),
         InlineKeyboardButton('ᵗⁱⁿʸ', callback_data='style+tiny'),
-
         ],[
-
         InlineKeyboardButton('ᑕOᗰIᑕ', callback_data='style+comic'),
         InlineKeyboardButton('𝗦𝗮𝗻𝘀', callback_data='style+sans'),
         InlineKeyboardButton('𝙎𝙖𝙣𝙨', callback_data='style+slant_sans'),
-
         ],[
-
         InlineKeyboardButton('𝘚𝘢𝘯𝘴', callback_data='style+slant'),
         InlineKeyboardButton('𝖲𝖺𝗇𝗌', callback_data='style+sim'),
-        InlineKeyboardButton('Ⓒ︎Ⓘ︎Ⓡ︎Ⓒ︎Ⓛ︎Ⓔ︎Ⓢ︎', callback_data='style+circles'),
-
+         InlineKeyboardButton('Ⓒ︎Ⓘ︎Ⓡ︎Ⓒ︎Ⓛ︎Ⓔ︎Ⓢ︎', callback_data='style+circles'),
         ],[
-
         InlineKeyboardButton('🅒︎🅘︎🅡︎🅒︎🅛︎🅔︎🅢︎', callback_data='style+circle_dark'),
         InlineKeyboardButton('𝔊𝔬𝔱𝔥𝔦𝔠', callback_data='style+gothic'),
         InlineKeyboardButton('𝕲𝖔𝖙𝖍𝖎𝖈', callback_data='style+gothic_bolt'),
-
         ],[
-
         InlineKeyboardButton('C͜͡l͜͡o͜͡u͜͡d͜͡s͜͡', callback_data='style+cloud'),
         InlineKeyboardButton('H̆̈ă̈p̆̈p̆̈y̆̈', callback_data='style+happy'),
         InlineKeyboardButton('S̑̈ȃ̈d̑̈', callback_data='style+sad'),
-
         ],[
-
-        InlineKeyboardButton('Next ➡️', callback_data="next")
+        InlineKeyboardButton('Next ➡️', callback_data="nxt")
     ]]
     if not cb:
         await m.reply_text(m.text, reply_markup=InlineKeyboardMarkup(buttons), quote=True)
     else:
-        await m.answer('hey')
+        await m.answer()
         await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
 
 
-@Client.on_callback_query(filters.regex('^next'))
+@Client.on_callback_query(filters.regex('^nxt'))
 async def nxt(c, m):
     if m.data == "nxt":
         buttons = [[
@@ -86,18 +73,18 @@ async def nxt(c, m):
             InlineKeyboardButton('S̶t̶r̶i̶k̶e̶', callback_data='style+strike'),
             InlineKeyboardButton('F༙r༙o༙z༙e༙n༙', callback_data='style+frozen')
             ],[
-            InlineKeyboardButton('⬅️ Back', callback_data='next+0')
+            InlineKeyboardButton('⬅️ Back', callback_data='nxt+0')
         ]]
-        await m.answer('hey')
+        await m.answer()
         await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
     else:
         await style_buttons(c, m, cb=True)
 
 
 @Client.on_callback_query(filters.regex('^style'))
-async def font_style(client, message):
-    await message.answer()
-    cmd, style = message.data.split('+')
+async def style(c, m):
+    await m.answer()
+    cmd, style = m.data.split('+')
 
     if style == 'typewriter':
         cls = Fonts.typewriter
@@ -177,8 +164,8 @@ async def font_style(client, message):
         cls = Fonts.strike
     if style == 'frozen':
         cls = Fonts.frozen
-    new_text = cls(message.message.reply_to_message.text)
+    new_text = cls(m.message.reply_to_message.text)
     try:
-        await message.message.edit_text(new_text, reply_markup=message.message.reply_markup)
+        await m.message.edit_text(new_text, reply_markup=m.message.reply_markup)
     except:
         pass
