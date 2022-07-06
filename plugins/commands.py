@@ -2,7 +2,7 @@ from pyrogram import Client, filters, idle
 import pyrogram
 from pyrogram.errors import FloodWait
 from helper.ban import BanChek
-#from helper.utils import not_subscribed
+from helper.utils import not_subscribed
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from helper.database import insert, getid
 from variables import STAT_STICK, PICS, ADMIN, DELAY
@@ -10,7 +10,7 @@ from plugins.logo_maker import generate_logo
 import asyncio
 import random
 
-#@Client.on_message(filters.private & filters.create(not_subscribed))
+@Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
     await message.reply_text(
        text="**Sorry bro,You didn't Joined Our Updates Channel Join now and start again🙏**",
