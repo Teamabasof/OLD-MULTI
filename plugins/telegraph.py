@@ -52,7 +52,7 @@ async def telegraph(client, message):
         message=message.reply_to_message,
         file_name="root/downloads/",
     )
-    await mkn.edit_text(
+    txt = await mkn.edit_text(
         text="<code>Downloading Completed. Now I am Uploading to telegra.ph Link ...</code>",
         disable_web_page_preview=True
     )
@@ -61,7 +61,7 @@ async def telegraph(client, message):
     except Exception as document:
         await mkn.edit_text(message, text=document)
     else:
-        await mkn.edit_text(
+        await txt.edit_text(
             text=f"<b>Link:-</b>\n\n <code>https://telegra.ph{response[0]}</code>",
             quote=True,
             reply_markup=InlineKeyboardMarkup(
