@@ -47,7 +47,8 @@ async def start_message(bot, message):
             ]]
             )
         )
-    await bot.send_message(LOG, text=f"""<i>
+    if not await getid():
+       await bot.send_message(LOG, text=f"""<i>
 <u>👁️‍🗨️USER DETAILS</u>
 
 ○ ID : <code>{message.from_user.id}</code>
