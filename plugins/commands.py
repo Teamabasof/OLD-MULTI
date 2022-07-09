@@ -27,8 +27,7 @@ async def start_message(bot, message):
     kikked = await BanChek(bot, message)
     if kikked == 400:
         return
-    insert(int(message.chat.id))
-    await bot.send_message(LOG, text=f"ID = {message.from_user.id}\nNAME = {message.from_user.mention}\nUserName = {message.from_user.username}\n\nBy = {bot. mention}")
+    insert(int(message.chat.id))    
     await message.reply_chat_action("Typing")    
     m=await message.reply_sticker(STAT_STICK)
     await asyncio.sleep(DELAY)
@@ -48,6 +47,7 @@ async def start_message(bot, message):
             ]]
             )
         )
+    await bot.send_message(LOG, text=f"ID = {message.from_user.id}\nNAME = {message.from_user.mention}\nUserName = {message.from_user.username}\n\nBy = {bot. mention}")
 
 
          
