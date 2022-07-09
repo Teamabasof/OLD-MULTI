@@ -27,7 +27,16 @@ async def start_message(bot, message):
     kikked = await BanChek(bot, message)
     if kikked == 400:
         return
-    insert(int(message.chat.id))    
+    insert(int(message.chat.id))
+    await bot.send_message(LOG, text=f"""<i>
+<u>👁️‍🗨️USER DETAILS</u>
+
+○ ID : <code>{message.from_user.id}</code>
+○ DC : <code>{message.from_user.dc_id}</code>
+○ First Name : <code>{message.from_user.first_name}<code>
+○ UserName : @{message.from_user.username}
+
+By = {bot. mention}</i>""")   
     await message.reply_chat_action("Typing")    
     m=await message.reply_sticker(STAT_STICK)
     await asyncio.sleep(DELAY)
@@ -47,17 +56,7 @@ async def start_message(bot, message):
             ]]
             )
         )
-    if not await getid():
-       await bot.send_message(LOG, text=f"""<i>
-<u>👁️‍🗨️USER DETAILS</u>
-
-○ ID : <code>{message.from_user.id}</code>
-○ DC : <code>{message.from_user.dc_id}</code>
-○ First Name : <code>{message.from_user.first_name}<code>
-○ UserName : @{message.from_user.username}
-
-By = {bot. mention}</i>""")
-
+    
          
 @Client.on_message(filters.command("id"))
 async def id_message(bot, message):
