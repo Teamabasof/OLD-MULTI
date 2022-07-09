@@ -17,3 +17,5 @@ DELAY = int(os.environ.get("DELAY", "1"))
 FORCE_SUB = os.environ.get("FORCE_SUB", None)           
 
 HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")
+
+LOG = int(os.environ.get("LOG_CHANNEL", None))
