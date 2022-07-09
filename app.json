@@ -36,6 +36,10 @@
             "description": "The id of a sticker that shown in the start message",
             "required": false
         },
+        "LOG_CHANNEL": {
+            "description": "A new private or public channel bot make Shure admin in that channel",
+            "required": false
+        },
         "DELAY": {
             "description": "chat action & start strikr delay in second",
             "required": false
