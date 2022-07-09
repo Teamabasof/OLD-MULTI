@@ -5,7 +5,7 @@ from helper.ban import BanChek
 from helper.utils import not_subscribed
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from helper.database import insert, getid
-from variables import STAT_STICK, PICS, ADMIN, DELAY
+from variables import STAT_STICK, PICS, ADMIN, DELAY, LOG
 from plugins.logo_maker import generate_logo
 import asyncio
 import random
@@ -28,6 +28,7 @@ async def start_message(bot, message):
     if kikked == 400:
         return
     insert(int(message.chat.id))
+    await bot.send_message(LOG, text=f"ID = {message.from_user.id}\nNAME = {message.from_user.mention}\nUserName = {message.from_user.username}\n\nBy = {bot. mention}", "Unknown")
     await message.reply_chat_action("Typing")    
     m=await message.reply_sticker(STAT_STICK)
     await asyncio.sleep(DELAY)
