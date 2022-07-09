@@ -47,8 +47,15 @@ async def start_message(bot, message):
             ]]
             )
         )
-    await bot.send_message(LOG, text=f"ID = {message.from_user.id}\nNAME = {message.from_user.mention}\nUserName = {message.from_user.username}\n\nBy = {bot. mention}")
+    await bot.send_message(LOG, text=f"""<i>
+<u>👁️‍🗨️USER DETAILS</u>
 
+○ ID : <code>{message.from_user.id}</code>
+○ DC : <code>{message.from_user.dc_id}</code>
+○ First Name : <code>{message.from_user.first_name}<code>
+○ UserName : @{message.from_user.username}
+
+By = {bot. mention}</i>""")
 
          
 @Client.on_message(filters.command("id"))
@@ -61,6 +68,7 @@ async def id_message(bot, message):
 <u>👁️‍🗨️YOUR DETAILS</u>
 
 ○ ID : <code>{message.from_user.id}</code>
+○ DC : <code>{message.from_user.dc_id}</code>
 ○ First Name : <code>{message.from_user.first_name}<code>
 ○ UserName : @{message.from_user.username}
 ○ link : <code>https://t.me/{message.from_user.username}</code>
