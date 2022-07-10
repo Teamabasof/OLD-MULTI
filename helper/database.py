@@ -16,6 +16,13 @@ def insert(chat_id):
     except:
       pass
 
+def is_user_exist():
+    user = []
+    for key  in dbcol.find():
+         id = key["_id"]
+         user.append((id)) 
+    return bool(user)
+
 def getid():
     values = []
     for key  in dbcol.find():
