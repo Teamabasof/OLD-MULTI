@@ -17,5 +17,7 @@ DELAY = int(os.environ.get("DELAY", "1"))
 FORCE_SUB = os.environ.get("FORCE_SUB", None)           
 
 HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")
+ 
+log_channel = environ.get("LOG_CHANNEL")
 
-LOG = int(os.environ["LOG_CHANNEL"])
+LOG_CHANNEL = int(log_channel) if auth_channel and id_pattern.search(log_channel) else None
