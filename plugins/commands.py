@@ -2,6 +2,7 @@ from pyrogram import Client, filters, idle
 import pyrogram
 from pyrogram.errors import FloodWait
 from helper.ban import BanChek
+from helper.motor_db import db
 from helper.utils import not_subscribed
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from helper.database import insert, getid, is_user_exist
@@ -27,8 +28,9 @@ async def start_message(bot, message):
     kikked = await BanChek(bot, message)
     if kikked == 400:
         return
-    if not await is_user_exist():
-       insert(int(message.chat.id))
+    insert(int(message.chat.id))
+    if not await db.is_user_exist(message.from_user.id):
+       await db.add_user(message.from_user.id)
        await bot.send_message(LOG, text=f"""<i>
 <u>👁️‍🗨️USER DETAILS</u>
 
