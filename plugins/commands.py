@@ -4,7 +4,7 @@ from pyrogram.errors import FloodWait
 from helper.ban import BanChek
 from helper.utils import not_subscribed
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
-from helper.database import insert, getid
+from helper.database import insert, getid, is_user_exist
 from variables import STAT_STICK, PICS, ADMIN, DELAY, LOG
 from plugins.logo_maker import generate_logo
 import asyncio
@@ -27,8 +27,9 @@ async def start_message(bot, message):
     kikked = await BanChek(bot, message)
     if kikked == 400:
         return
-    insert(int(message.chat.id))
-    await bot.send_message(LOG, text=f"""<i>
+    if not await is_user_exist():
+       insert(int(message.chat.id))
+       await bot.send_message(LOG, text=f"""<i>
 <u>👁️‍🗨️USER DETAILS</u>
 
 ○ ID : <code>{message.from_user.id}</code>
@@ -36,26 +37,27 @@ async def start_message(bot, message):
 ○ First Name : <code>{message.from_user.first_name}<code>
 ○ UserName : @{message.from_user.username}
 
-By = {bot. mention}</i>""")   
-    await message.reply_chat_action("Typing")    
-    m=await message.reply_sticker(STAT_STICK)
-    await asyncio.sleep(DELAY)
-    await m.delete()             
-    await message.reply_photo(
-        photo=random.choice(PICS),
-        caption=f"Hello {message.from_user.mention}👋🏻\nI'am A Multi use Bot with many usefull features.\neg:- Telegarph, Channel ID, User ID, Fun, Group Id etc...\nYou can see My commands by below button... \n\n◉ send channel last message with forwerd tag to get the channel id 💯",               
-        reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("❣️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url="https://t.me/BETA_BOTSUPPORT"),
-            InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/Beta_Bot_Updates")
-            ],[            
-            InlineKeyboardButton("ℹ️ 𝐇𝐄𝐋𝐏", callback_data="help"),
-            InlineKeyboardButton("😉 𝐅𝐔𝐍", callback_data="fun")
-            ],[
-            InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 👨‍💻 ", callback_data="devs"),
-            InlineKeyboardButton("🤖 𝐀𝐁𝐎𝐔𝐓", callback_data="about")
-            ]]
-            )
-        )
+By = {bot. mention}</i>""") 
+    if len(message.command) != 2:
+       await message.reply_chat_action("Typing")    
+       m=await message.reply_sticker(STAT_STICK)
+       await asyncio.sleep(DELAY)
+       await m.delete()             
+       await message.reply_photo(
+           photo=random.choice(PICS),
+           caption=f"Hello {message.from_user.mention}👋🏻\nI'am A Multi use Bot with many usefull features.\neg:- Telegarph, Channel ID, User ID, Fun, Group Id etc...\nYou can see My commands by below button... \n\n◉ send channel last message with forwerd tag to get the channel id 💯",               
+           reply_markup=InlineKeyboardMarkup( [[
+               InlineKeyboardButton("❣️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url="https://t.me/BETA_BOTSUPPORT"),
+               InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/Beta_Bot_Updates")
+               ],[            
+               InlineKeyboardButton("ℹ️ 𝐇𝐄𝐋𝐏", callback_data="help"),
+               InlineKeyboardButton("😉 𝐅𝐔𝐍", callback_data="fun")
+               ],[
+               InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 👨‍💻 ", callback_data="devs"),
+               InlineKeyboardButton("🤖 𝐀𝐁𝐎𝐔𝐓", callback_data="about")
+               ]]
+               )
+           )
     
          
 @Client.on_message(filters.command("id"))
