@@ -25,10 +25,10 @@ async def is_not_subscribed(client, message):
 
 @Client.on_message(filters.private & filters.command("start"))
 async def start_message(bot, message):
-    kikked = await BanChek(bot, message)
-    if kikked == 400:
-        return
-    insert(int(message.chat.id))
+       kikked = await BanChek(bot, message)
+       if kikked == 400:
+           return
+       insert(int(message.chat.id))
        await message.reply_chat_action("Typing")    
        m=await message.reply_sticker(STAT_STICK)
        await asyncio.sleep(DELAY)
@@ -48,9 +48,9 @@ async def start_message(bot, message):
                ]]
                )
            )
-    if not await db.is_user_exist(message.from_user.id):
-       await db.add_user(message.from_user.id)
-       await bot.send_message(LOG, text=f"""<i>
+       if not await db.is_user_exist(message.from_user.id):
+          await db.add_user(message.from_user.id)
+          await bot.send_message(LOG, text=f"""<i>
 <u>👁️‍🗨️USER DETAILS</u>
 
 ○ ID : <code>{message.from_user.id}</code>
