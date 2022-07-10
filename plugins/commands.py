@@ -5,7 +5,7 @@ from helper.ban import BanChek
 from helper.motor_db import db
 from helper.utils import not_subscribed
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
-from helper.database import insert, getid, is_user_exist
+from helper.database import insert, getid
 from variables import STAT_STICK, PICS, ADMIN, DELAY, LOG
 from plugins.logo_maker import generate_logo
 import asyncio
