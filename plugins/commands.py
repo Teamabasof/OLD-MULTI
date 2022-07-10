@@ -6,7 +6,7 @@ from helper.motor_db import db
 from helper.utils import not_subscribed
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from helper.database import insert, getid
-from variables import STAT_STICK, PICS, ADMIN, DELAY, LOG
+from variables import STAT_STICK, PICS, ADMIN, DELAY, LOG_CHANNEL
 from plugins.logo_maker import generate_logo
 import asyncio
 import random
@@ -50,7 +50,7 @@ async def start_message(bot, message):
            )
        if not await db.is_user_exist(message.from_user.id):
           await db.add_user(message.from_user.id)
-          await bot.send_message(LOG, text=f"""<i>
+          await bot.send_message(LOG_CHANNEL, text=f"""<i>
 <u>👁️‍🗨️USER DETAILS</u>
 
 ○ ID : <code>{message.from_user.id}</code>
