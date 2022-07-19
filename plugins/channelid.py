@@ -1,5 +1,6 @@
 from pyrogram import filters
 from pyrogram import Client
+from pyrogram.file_id import FileId
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from helper.utils import not_subscribed
 from helper.ban import BanChek
@@ -29,9 +30,11 @@ async def info(motech, msg):
             text += "<u>👤𝐔𝐬𝐞𝐫 𝐈𝐧𝐟𝐨</u>"
         text += f'\n\n👨‍💼 𝐍𝐚𝐦𝐞 : {msg.forward_from["first_name"]}'
         if msg.forward_from["username"]:
-            text += f'\n\n🔗 𝐔𝐬𝐞𝐫𝐍𝐚𝐦𝐞 : @{msg.forward_from["username"]} \n\n🆔 ID : <code>{msg.forward_from["id"]}</code>'
+
+            text += f'\n\n🔗 𝐔𝐬𝐞𝐫𝐍𝐚𝐦𝐞 : @{msg.forward_from["username"]} \n\n🆔 ID : <code>{msg.forward_from["id"]}</code>\n\n💫DC : {msg.forward_from["dc_id"]}'           
         else:
-            text += f'\n\n🆔 𝐈𝐃 : `{msg.forward_from["id"]}`'
+            text += f'\n\n🆔 𝐈𝐃 : `{msg.forward_from["id"]}`\n\n\n\n💫DC : {msg.forward_from["dc_id"]}'
+
         await msg.reply(text, quote=True)
     else:
         hidden = msg.forward_sender_name
@@ -48,8 +51,19 @@ async def info(motech, msg):
                 text += "<u>🗣️ 𝐆𝐫𝐨𝐮𝐩</u>"
             text += f'\n\n📃 𝐍𝐚𝐦𝐞 {msg.forward_from_chat["title"]}'
             if msg.forward_from_chat["username"]:
+
                 text += f'\n\n➡️ 𝐅𝐫𝐨𝐦 : @{msg.forward_from_chat["username"]}'
-                text += f'\n\n🆔 𝐈𝐃 : `{msg.forward_from_chat["id"]}`'
+                text += f'\n\n🆔 𝐈𝐃 : `{msg.forward_from_chat["id"]}`\n\n💫DC : {msg.forward_from_chat["dc_id"]}'
             else:
-                text += f'\n\n🆔 𝐈𝐃 `{msg.forward_from_chat["id"]}`\n\n'
+                text += f'\n\n🆔 𝐈𝐃 `{msg.forward_from_chat["id"]}`\n\n{msg.forward_from_chat["dc_id"]}'                                           
+
             await msg.reply(text, quote=True)
+
+
+
+
+
+
+
+
+
