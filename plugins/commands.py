@@ -91,6 +91,17 @@ async def stickerid(bot, message):
        await message.reply("Oops !! Not a sticker file")
 
 
+@Client.on_message(filters.command(["photoid"]))
+async def photoid(bot, message): 
+    kikked = await BanChek(bot, message)
+    if kikked == 400:
+        return 
+    if message.reply_to_message.photo:
+       await message.reply(f"**Photo ID is**  \n `{message.reply_to_message.photo.file_id}` \n \n ** Unique ID is ** \n\n`{message.reply_to_message.photo.file_unique_id}`", quote=True)
+    else: 
+       await message.reply("Oops !! Not a  Photo")
+
+
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
 async def broadcast(bot, message):
     if (message.reply_to_message):
