@@ -12,7 +12,7 @@
 
 This is a pyrogram based telagram bot. Telagram user id, info, telagrph, stickerid, fun, etc....
 
-
+### 🚀 Add `LOG_CHANNEL` support 
 ### 🥳 It has `UPSTREAM_REPO` support 🤩
 
 ### Deploy to Heroku
