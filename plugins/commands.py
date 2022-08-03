@@ -58,7 +58,7 @@ async def start_message(bot, message):
 ○ First Name : <code>{message.from_user.first_name}<code>
 ○ UserName : @{message.from_user.username}
 
-By = {bot. mention}</i>""")     
+By = {bot.mention}</i>""")     
 
 
          
