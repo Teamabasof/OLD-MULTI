@@ -21,3 +21,29 @@ HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")
 log_channel = environ.get("LOG_CHANNEL")
 
 LOG_CHANNEL = int(log_channel) if log_channel and id_pattern.search(log_channel) else None
+
+LOG_TEXT = """<i><u>👁️‍🗨️USER DETAILS</u>
+
+○ ID : <code>{id}</code>
+○ DC : <code>{dc_id}</code>
+○ First Name : <code>{first_name}<code>
+○ UserName : @{username}
+
+By = {bot}</i>"""
+
+
+B_TEXT = """🍁 ʙʀᴏᴀᴅᴄᴀꜱᴛ ꜱᴛᴀʀᴛᴇᴅ 🍁 
+╭━━━━━━━━━━━━━━━━━➣
+┣⪼📯 ᴛᴏᴛᴀʟ - <code>{tot}</code>
+┣⪼✅️ ᴅᴏɴᴇ - <code>{success}</code>
+┣⪼❌️ ꜰᴀɪʟᴇᴅ - <code>{failed}</code>
+╰━━━━━━━━━━━━━━━━━➣ """
+
+
+
+
+
+
+
+
+
