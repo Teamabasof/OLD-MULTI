@@ -10,6 +10,7 @@ from variables import STAT_STICK, PICS, ADMIN, DELAY, LOG_CHANNEL
 from plugins.logo_maker import generate_logo
 import asyncio
 import random
+import time
 
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
@@ -108,12 +109,21 @@ async def broadcast(bot, message):
       ms = await message.reply_text("Geting All ids from database ...........")
       ids = getid()
       tot = len(ids)
+      success = 0 
+      failed = 0
       await ms.edit(f"Starting Broadcast .... \n Sending Message To {tot} Users")
       for id in ids:
         try:
+     	   time.sleep(1)
      	   await message.reply_to_message.copy(id)
+           success += 1 
         except:
+     	   failed += 1
      	   pass
+        try:
+     	   await ms.edit( f"Message sent to {success} chat(s). {failed} chat(s) failed on receiving message. \nTotal - {tot}" )
+        except FloodWait as e:
+     	   await asyncio.sleep(t.x)
 
 
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["users"]))
