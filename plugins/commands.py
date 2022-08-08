@@ -128,10 +128,21 @@ async def broadcast(bot, message):
 
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["users"]))
 async def get_users(bot, message):    
-    msg = await bot.send_message(chat_id=message.chat.id, text="<b>Processing ...</b>")
+    a = await message.reply_text(text="<b>Processing</b>")
+    await asyncio.sleep(0.5)
+    b = await a.edit("<b>Processing ● </b>")
+    await asyncio.sleep(0.5)
+    c = await b.edit("<b>Processing ● ● </b>")
+    await asyncio.sleep(0.5)
+    d = await c.edit("<b>Processing ● ● ● </b>")
+    await asyncio.sleep(0.5)
+    e = await d.edit("<b>Processing ● ● ● ● </b>")
+    await asyncio.sleep(0.5)
+    f = await e.edit("<b>Processing ● ● ● ● ● </b>")
+    await asyncio.sleep(0.5)
     ids = getid()
     tot = len(ids)
-    await msg.edit(f"Total uses = {tot}")
+    await f.edit(f"Total uses = {tot}")
 
 
 @Client.on_message(filters.command("logosq") & filters.incoming & filters.text & ~filters.forwarded & filters.private)
