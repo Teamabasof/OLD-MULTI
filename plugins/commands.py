@@ -6,7 +6,7 @@ from helper.motor_db import db
 from helper.utils import not_subscribed
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from helper.database import insert, getid
-from variables import STAT_STICK, PICS, ADMIN, DELAY, LOG_CHANNEL
+from variables import STAT_STICK, PICS, ADMIN, DELAY, LOG_CHANNEL, LOG_TEXT, B_TEXT
 from plugins.logo_maker import generate_logo
 import asyncio
 import random
@@ -51,16 +51,7 @@ async def start_message(bot, message):
            )
        if not await db.is_user_exist(message.from_user.id):
           await db.add_user(message.from_user.id)
-          await bot.send_message(LOG_CHANNEL, text=f"""<i>
-<u>👁️‍🗨️USER DETAILS</u>
-
-○ ID : <code>{message.from_user.id}</code>
-○ DC : <code>{message.from_user.dc_id}</code>
-○ First Name : <code>{message.from_user.first_name}<code>
-○ UserName : @{message.from_user.username}
-
-By = {bot.mention}</i>""")     
-
+          await bot.send_message(LOG_CHANNEL, text=LOG_TEXT.format(id=message.from_user.id, dc_id=message.from_user.dc_id, first_name=message.from_user.first_name, username=message.from_user.username, bot=bot.mention))
 
          
 @Client.on_message(filters.command("id"))
@@ -121,7 +112,7 @@ async def broadcast(bot, message):
      	failed += 1 
      	pass
      try:
-     	await ms.edit( f"Message sent to {success} chat(s). {failed} chat(s) failed on receiving message. \nTotal - {tot}" )
+     	await ms.edit(B_TEXT.format(success=success, failed=failed, tot=tot))
      except FloodWait as e:
      	await asyncio.sleep(t.x)
 
